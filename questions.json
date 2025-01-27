@@ -1,0 +1,34 @@
+[
+	{
+		"layer": "Physical",
+		"questionset": [
+			{
+				"question" : "What is the best way to prevent wiretapping?" ,
+				"answers" : ["Cable Locking","Port Security", "Shielding", "Network Encryption"],
+				"correct_option" : "Cable Locking"
+			},
+			{
+				"question" : "How can you protect against jamming attacks?" ,
+				"answers" : ["Implement frequency hopping", "Use tamper-proof locks", "Disable unused ports", "Enable MAC filtering"],
+				"correct_option" : "Implement frequency hopping"
+			}
+			
+		]
+	},
+	{
+		"layer": "Data Link",
+		"questionset": [
+			{
+				"question" : "What does dynamic ARP inspection (DAI) help prevent?" ,
+				"answers" : ["ARP Spoofing", "MAC Flooding", "IP spoofing", "SYN Flood"],
+				"correct_option" : "ARP Spoofing"
+			},
+			{
+				"question" : "Which method limits the number of devices on a switch port?" ,
+				"answers" : ["Port security", "route isolation", "frequency hopping", "ssl encryption"],
+				"correct_option" : "Port security"
+			}
+			
+		]
+	}
+]

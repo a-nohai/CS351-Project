@@ -1,0 +1,55 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://b5ncgnmupcgr5"]
+
+[ext_resource type="FontFile" uid="uid://b34blybarombk" path="res://kenney_ui-pack-space-expansion/Font/Kenney Future.ttf" id="1_8v5my"]
+[ext_resource type="StyleBox" uid="uid://is10agykmjc" path="res://scenes/card_ui/card_base_stylebox.tres" id="1_c1ihw"]
+[ext_resource type="StyleBox" uid="uid://c3ju65m21nw2t" path="res://scenes/card_ui/card_hover_stylebox.tres" id="2_ubyi1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ovdh"]
+bg_color = Color(0.0745098, 0.607843, 0.619608, 0.443137)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(8.12206e-08, 0.0995542, 0.0453379, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nqdrv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t1w34"]
+bg_color = Color(0.0745098, 0.607843, 0.619608, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.513465, 0.392327, 0.167893, 1)
+border_blend = true
+
+[resource]
+default_font = ExtResource("1_8v5my")
+default_font_size = 24
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(1, 1, 1, 1)
+Button/colors/font_focus_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_color = Color(1, 1, 1, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_disabled_color = Color(1, 1, 1, 1)
+Button/colors/icon_focus_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_color = Color(1, 1, 1, 1)
+Button/colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+Button/colors/icon_normal_color = Color(1, 1, 1, 1)
+Button/colors/icon_pressed_color = Color(1, 1, 1, 1)
+Button/constants/align_to_largest_stylebox = 0
+Button/constants/h_separation = 0
+Button/constants/icon_max_width = 0
+Button/constants/outline_size = 0
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_8v5my")
+Button/styles/disabled = SubResource("StyleBoxFlat_5ovdh")
+Button/styles/focus = SubResource("StyleBoxEmpty_nqdrv")
+Button/styles/hover = ExtResource("2_ubyi1")
+Button/styles/normal = ExtResource("1_c1ihw")
+Button/styles/pressed = SubResource("StyleBoxFlat_t1w34")
+Panel/styles/panel = ExtResource("1_c1ihw")
+PanelContainer/styles/panel = ExtResource("1_c1ihw")

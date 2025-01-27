@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3 uid="uid://c24xf71rs86v8"]
+
+[ext_resource type="Script" path="res://scenes/ui/mcq_panel.gd" id="1_6pq8o"]
+[ext_resource type="PackedScene" uid="uid://bv1kti1ujuk6r" path="res://scenes/ui/question.tscn" id="2_5xf0k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wenlf"]
+bg_color = Color(0, 0, 0, 0.192157)
+
+[node name="MCQPanel" type="Panel"]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wenlf")
+script = ExtResource("1_6pq8o")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -695.0
+offset_top = -333.5
+offset_right = 695.0
+offset_bottom = 333.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Question" parent="VBoxContainer" instance=ExtResource("2_5xf0k")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 250)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1000, 300)
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 0
+
+[node name="Answer1" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(900, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 34
+text = "Ans"
+
+[node name="Answer2" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(900, 80)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_font_sizes/font_size = 34
+text = "Ans"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/VBoxContainer"]
+custom_minimum_size = Vector2(1000, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 0
+
+[node name="Answer3" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(900, 80)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 34
+text = "Ans"
+
+[node name="Answer4" type="Button" parent="VBoxContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(900, 80)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 34
+text = "Ans"

@@ -1,0 +1,177 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1e2t6jtqxlan"]
+
+[ext_resource type="Script" path="res://scenes/map/map.gd" id="1_qaaq0"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oqcqn"]
+font_size = 42
+
+[node name="Map" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_qaaq0")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0823529, 0.607843, 0.619608, 0.631373)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -959.5
+offset_top = -440.5
+offset_right = 959.5
+offset_bottom = 440.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="Layer1" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Physical"
+label_settings = SubResource("LabelSettings_oqcqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer1Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Go
+"
+
+[node name="Layer5" type="Label" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+text = "Session"
+label_settings = SubResource("LabelSettings_oqcqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer5Button" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Go
+"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="Layer2" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Data Link"
+label_settings = SubResource("LabelSettings_oqcqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer2Button" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Go
+"
+
+[node name="Layer6" type="Label" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+text = "Presentation"
+label_settings = SubResource("LabelSettings_oqcqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer6Button" type="Button" parent="HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Go
+"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="Layer3" type="Label" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Network"
+label_settings = SubResource("LabelSettings_oqcqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer3Button" type="Button" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Go
+"
+
+[node name="Layer7" type="Label" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+text = "Application"
+label_settings = SubResource("LabelSettings_oqcqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer7Button" type="Button" parent="HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Go
+"
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="Layer4" type="Label" parent="HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "Transport"
+label_settings = SubResource("LabelSettings_oqcqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Layer4Button" type="Button" parent="HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Go
+"
+
+[node name="Final" type="Label" parent="HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "Final"
+label_settings = SubResource("LabelSettings_oqcqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FinalButton" type="Button" parent="HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Go
+"
+
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Layer1Button" to="." method="_on_button_pressed" binds= ["Physical"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer/Layer5Button" to="." method="_on_button_pressed" binds= ["Session"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Layer2Button" to="." method="_on_button_pressed" binds= ["Data Link"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Layer6Button" to="." method="_on_button_pressed" binds= ["Presentation"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Layer3Button" to="." method="_on_button_pressed" binds= ["Network"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Layer7Button" to="." method="_on_button_pressed" binds= ["Application"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer4/Layer4Button" to="." method="_on_button_pressed" binds= ["Transport"]]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer4/FinalButton" to="." method="_on_button_pressed" binds= ["Final"]]

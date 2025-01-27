@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bj1rvdbmg4i3c"]
+
+[ext_resource type="PackedScene" uid="uid://4srs7kh73kaq" path="res://scenes/enemy/enemy.tscn" id="1_we2da"]
+[ext_resource type="Resource" uid="uid://ckvvwef0a2h55" path="res://enemies/virus2/virus2_enemy.tres" id="2_ihlsb"]
+
+[node name="Data2" type="Node2D"]
+
+[node name="Enemy" parent="." instance=ExtResource("1_we2da")]
+position = Vector2(1550, 530)
+stats = ExtResource("2_ihlsb")

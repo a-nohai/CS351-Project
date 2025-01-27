@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://dt0ld4qdjq8qk"]
+
+[ext_resource type="Script" path="res://scenes/run/run.gd" id="1_ig1d8"]
+[ext_resource type="Resource" uid="uid://su3qn31cihea" path="res://scenes/run/run_startup.tres" id="2_23ygx"]
+[ext_resource type="PackedScene" uid="uid://d1e2t6jtqxlan" path="res://scenes/map/map.tscn" id="2_qh3lo"]
+[ext_resource type="Resource" uid="uid://cat3ax5exrduk" path="res://scenes/run/current_layer.tres" id="3_0kf6c"]
+
+[node name="Run" type="Node"]
+script = ExtResource("1_ig1d8")
+run_startup = ExtResource("2_23ygx")
+current_layer = ExtResource("3_0kf6c")
+
+[node name="Map" parent="." instance=ExtResource("2_qh3lo")]
+
+[node name="CurrentView" type="Node" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="MapButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Map"
+
+[node name="BattleButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Battle"

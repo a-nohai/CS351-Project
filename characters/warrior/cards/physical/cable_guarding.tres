@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://ci8yy6fnl2mu1"]
+
+[ext_resource type="Texture2D" uid="uid://bmudpl1v1abps" path="res://kenney_roguelike-characters/Spritesheet/cable_guarding.png" id="1_5ubxo"]
+[ext_resource type="Script" path="res://characters/warrior/cards/physical/cable_guarding.gd" id="1_lfj7q"]
+[ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="3_miaal"]
+
+[resource]
+script = ExtResource("1_lfj7q")
+id = "cable_guarding"
+type = 1
+target = 0
+cost = 1
+icon = ExtResource("1_5ubxo")
+tooltip_text = "[center][color=\"0044ff\"]Cable Guarding[/color].[/center]"
+sound = ExtResource("3_miaal")

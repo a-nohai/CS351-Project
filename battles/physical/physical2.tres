@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="BattleStats" load_steps=3 format=3 uid="uid://d0qfeqyehnn3t"]
+
+[ext_resource type="PackedScene" uid="uid://creg7mla2qtc" path="res://battles/physical/physical2.tscn" id="1_36iqg"]
+[ext_resource type="Script" path="res://custom_resources/battle_stats.gd" id="1_l8l1o"]
+
+[resource]
+script = ExtResource("1_l8l1o")
+enemies = ExtResource("1_36iqg")

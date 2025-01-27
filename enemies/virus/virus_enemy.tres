@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://xf54827v0lv1"]
+
+[ext_resource type="Texture2D" uid="uid://bajre4wu0msxe" path="res://kenney_roguelike-characters/Spritesheet/enemy.png" id="1_0tohy"]
+[ext_resource type="PackedScene" uid="uid://4pomdfijrnoo" path="res://enemies/virus/virus_enemy_ai.tscn" id="1_8y1ac"]
+[ext_resource type="Script" path="res://custom_resources/enemy_stats.gd" id="1_afcut"]
+
+[resource]
+script = ExtResource("1_afcut")
+ai = ExtResource("1_8y1ac")
+max_health = 10
+art = ExtResource("1_0tohy")

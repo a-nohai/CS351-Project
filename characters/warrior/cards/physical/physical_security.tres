@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://vbihfg8wovux"]
+
+[ext_resource type="Texture2D" uid="uid://coasovla6i54r" path="res://kenney_roguelike-characters/Spritesheet/physical_security.png" id="1_nh07w"]
+[ext_resource type="Script" path="res://characters/warrior/cards/physical/physical_security.gd" id="1_t45j2"]
+[ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="3_nm73f"]
+
+[resource]
+script = ExtResource("1_t45j2")
+id = "physical_security"
+type = 1
+target = 0
+cost = 1
+icon = ExtResource("1_nh07w")
+tooltip_text = "[center][color=\"0044ff\"]Physical Security[/color].[/center]"
+sound = ExtResource("3_nm73f")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://b3prykff2vpen"]
+
+[ext_resource type="Texture2D" uid="uid://dkioldswuhpa1" path="res://kenney_roguelike-characters/Spritesheet/fireball.png" id="1_37q0r"]
+[ext_resource type="Script" path="res://characters/warrior/cards/warrior_axe_attack.gd" id="2_aooar"]
+[ext_resource type="AudioStream" uid="uid://dspqcf81x3gsh" path="res://sounds/22_Slash_04.wav" id="3_pkv6g"]
+
+[resource]
+script = ExtResource("2_aooar")
+id = "warrior_axe_attack"
+type = 0
+target = 1
+cost = 1
+icon = ExtResource("1_37q0r")
+tooltip_text = "[center]Deal [color=\"ff0000\"]6[/color] damage to a single enemy.[/center]"
+sound = ExtResource("3_pkv6g")

@@ -1,0 +1,6 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://ck3n7q0w3gnfs"]
+
+[ext_resource type="Shader" path="res://kenney_roguelike-characters/Spritesheet/white_sprite_material.gdshader" id="1_yh3w8"]
+
+[resource]
+shader = ExtResource("1_yh3w8")

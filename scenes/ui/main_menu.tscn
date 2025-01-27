@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3 uid="uid://cum3mcb5cj3ud"]
+
+[ext_resource type="Script" path="res://scenes/ui/main_menu.gd" id="1_g0h4w"]
+[ext_resource type="Resource" uid="uid://su3qn31cihea" path="res://scenes/run/run_startup.tres" id="2_tiv8t"]
+
+[sub_resource type="Gradient" id="Gradient_q78up"]
+colors = PackedColorArray(0.0839384, 0.60957, 0.619278, 1, 8.12206e-08, 0.0995542, 0.0453379, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_l8yth"]
+gradient = SubResource("Gradient_q78up")
+width = 75
+
+[sub_resource type="LabelSettings" id="LabelSettings_renfp"]
+font_size = 70
+shadow_size = 32
+shadow_color = Color(0, 0, 0, 0.639216)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g0h4w")
+run_startup = ExtResource("2_tiv8t")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_l8yth")
+
+[node name="Label" type="Label" parent="."]
+custom_minimum_size = Vector2(500, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -587.0
+offset_top = -309.0
+offset_right = 587.0
+offset_bottom = -109.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "IBM Cybersecurity game"
+label_settings = SubResource("LabelSettings_renfp")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -68.0
+offset_right = 174.0
+offset_bottom = 282.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 23
+
+[node name="Continue" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+disabled = true
+text = "Continue"
+
+[node name="NewGame" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "New Game"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "Exit"
+
+[connection signal="pressed" from="VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
