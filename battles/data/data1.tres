@@ -6,3 +6,4 @@
 [resource]
 script = ExtResource("2_y7jsm")
 enemies = ExtResource("1_7yrya")
+final_battle = false

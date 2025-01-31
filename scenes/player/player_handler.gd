@@ -38,7 +38,7 @@ func start_turn() -> void:
 func end_turn() -> void:
 	hand.disable_hand()
 	discard_cards()
-
+	
 
 func draw_card() -> void:
 	reshuffle_deck_from_discard()

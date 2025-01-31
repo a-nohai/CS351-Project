@@ -5,8 +5,8 @@
 [ext_resource type="Script" path="res://scenes/ui/hand.gd" id="2_jm62g"]
 [ext_resource type="PackedScene" uid="uid://4srs7kh73kaq" path="res://scenes/enemy/enemy.tscn" id="2_uyajn"]
 [ext_resource type="PackedScene" uid="uid://dyrt54bb50eqf" path="res://scenes/card_target_selector/card_target_selector.tscn" id="3_3dcq0"]
+[ext_resource type="AudioStream" uid="uid://ck6s5cv3p28pn" path="res://sounds/Track04.mp3" id="3_4i7ie"]
 [ext_resource type="PackedScene" uid="uid://bdlnkstogis6x" path="res://scenes/player/player.tscn" id="3_qh4kj"]
-[ext_resource type="AudioStream" uid="uid://c3oy6mulv8jhe" path="res://sounds/battle.mp3" id="3_r4j6w"]
 [ext_resource type="Script" path="res://scenes/enemy/enemy_handler.gd" id="4_2kpr1"]
 [ext_resource type="Resource" uid="uid://cat3ax5exrduk" path="res://scenes/run/current_layer.tres" id="4_5y07r"]
 [ext_resource type="Resource" uid="uid://dx8hemaxaqej3" path="res://characters/warrior/warrior.tres" id="4_e2853"]
@@ -28,7 +28,7 @@ size = Vector2(1920, 795)
 [node name="Battle" type="Node2D"]
 script = ExtResource("1_27m4w")
 char_stats = ExtResource("4_e2853")
-music = ExtResource("3_r4j6w")
+music = ExtResource("3_4i7ie")
 current_layer = ExtResource("4_5y07r")
 metadata/_edit_lock_ = true
 

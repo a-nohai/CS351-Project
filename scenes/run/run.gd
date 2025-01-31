@@ -14,6 +14,7 @@ const DATA_DECK := preload("res://characters/warrior/warrior_data_deck.tres")
 @onready var battle_button: Button = $"%BattleButton"
 @onready var map_button: Button = $"%MapButton"
 
+var prev_battle: BattleStats
 
 var character: CharacterStats
 
@@ -35,6 +36,7 @@ func _start_run() -> void:
 func _change_view(scene: PackedScene) -> Node:
 	if current_view.get_child_count() > 0:
 		current_view.get_child(0).queue_free()
+		await current_view.get_child(0).tree_exited
 		
 	get_tree().paused = false
 	var new_view := scene.instantiate()
@@ -57,16 +59,16 @@ func _setup_event_connections() -> void:
 	map_button.pressed.connect(_show_map)
 
 func _on_battle_room_entered() -> void:
-	var battle_scene: Battle = _change_view(BATTLE_SCENE) as Battle
+	var battle_scene: Battle = await _change_view(BATTLE_SCENE) as Battle
 	match current_layer.layer:
 		"Physical":
 			character.deck = PHYSICAL_DECK
 			battle_scene.battle_stats = preload("res://battles/physical/physical1.tres")
 		"Data Link":
 			character.deck = DATA_DECK
-			character.max_health = 30
 			battle_scene.battle_stats = preload("res://battles/data/data1.tres")
 	battle_scene.char_stats = character
+	prev_battle = battle_scene.battle_stats
 	battle_scene.start_battle()
 
 func _on_map_exited(layer: String) -> void:
@@ -75,6 +77,26 @@ func _on_map_exited(layer: String) -> void:
 
 func _on_battle_win() -> void:
 	get_tree().paused = false
-	_show_map()
+	if not prev_battle.final_battle:
+		var battle_path = prev_battle.get_path()
+		var regex = RegEx.new()
+		regex.compile("\\d+")
+		var numbers_found = regex.search(battle_path)
+		var number_found = int(numbers_found.get_string())
+		var new_battle_num = number_found+1
+		
+		var new_path = battle_path.replace(str(number_found), str(new_battle_num))
+		var new_battle_scene: Battle = await _change_view(BATTLE_SCENE) as Battle
+		match current_layer.layer:
+			"Physical":
+				character.deck = PHYSICAL_DECK
+			"Data Link":
+				character.deck = DATA_DECK
+		new_battle_scene.battle_stats = load(new_path)
+		new_battle_scene.char_stats = character
+		prev_battle = new_battle_scene.battle_stats
+		new_battle_scene.start_battle()
+	else:
+		_show_map()
 	
 	
