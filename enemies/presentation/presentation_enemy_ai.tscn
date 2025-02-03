@@ -1,0 +1,82 @@
+[gd_scene load_steps=19 format=3 uid="uid://ce2xg5ictspmr"]
+
+[ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_ojkma"]
+[ext_resource type="Script" path="res://enemies/presentation/data_tampering.gd" id="2_xhapc"]
+[ext_resource type="Script" path="res://enemies/presentation/man_in_the_middle.gd" id="3_3mf4f"]
+[ext_resource type="Texture2D" uid="uid://bmudpl1v1abps" path="res://kenney_roguelike-characters/Spritesheet/cable_guarding.png" id="3_ythh8"]
+[ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_2ggkj"]
+[ext_resource type="Script" path="res://enemies/presentation/encoding_exploits.gd" id="4_74a7c"]
+[ext_resource type="Script" path="res://enemies/presentation/virus_block_action.gd" id="5_3kjyp"]
+[ext_resource type="AudioStream" uid="uid://dspqcf81x3gsh" path="res://sounds/22_Slash_04.wav" id="5_qoumi"]
+[ext_resource type="Script" path="res://enemies/presentation/virus_mega_block_action.gd" id="6_n5td2"]
+[ext_resource type="Texture2D" uid="uid://coasovla6i54r" path="res://kenney_roguelike-characters/Spritesheet/physical_security.png" id="7_xhdko"]
+[ext_resource type="Texture2D" uid="uid://bnoe21latb3a8" path="res://kenney_roguelike-characters/Spritesheet/block.png" id="9_6juy4"]
+[ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="11_21c5q"]
+[ext_resource type="Texture2D" uid="uid://qxqofct7nmx" path="res://kenney_roguelike-characters/Spritesheet/megablock.png" id="13_2l1i8"]
+
+[sub_resource type="Resource" id="Resource_4c1bg"]
+script = ExtResource("4_2ggkj")
+number = "8"
+icon = ExtResource("3_ythh8")
+
+[sub_resource type="Resource" id="Resource_sx027"]
+script = ExtResource("4_2ggkj")
+number = "8"
+icon = ExtResource("7_xhdko")
+
+[sub_resource type="Resource" id="Resource_8re6o"]
+script = ExtResource("4_2ggkj")
+number = "8"
+icon = ExtResource("9_6juy4")
+
+[sub_resource type="Resource" id="Resource_imnc3"]
+script = ExtResource("4_2ggkj")
+number = "6"
+icon = ExtResource("9_6juy4")
+
+[sub_resource type="Resource" id="Resource_xxfhx"]
+script = ExtResource("4_2ggkj")
+number = "15"
+icon = ExtResource("13_2l1i8")
+
+[node name="PresentationEnemyAI" type="Node"]
+script = ExtResource("1_ojkma")
+
+[node name="DataTampering" type="Node" parent="."]
+script = ExtResource("2_xhapc")
+damage = 8
+intent = SubResource("Resource_4c1bg")
+sound = ExtResource("5_qoumi")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="ManInTheMiddle" type="Node" parent="."]
+script = ExtResource("3_3mf4f")
+damage = 8
+intent = SubResource("Resource_sx027")
+sound = ExtResource("5_qoumi")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="EncodingExploits" type="Node" parent="."]
+script = ExtResource("4_74a7c")
+damage = 8
+intent = SubResource("Resource_8re6o")
+sound = ExtResource("5_qoumi")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="BlockAction" type="Node" parent="."]
+script = ExtResource("5_3kjyp")
+intent = SubResource("Resource_imnc3")
+sound = ExtResource("11_21c5q")
+type = 1
+chance_weight = 1.0
+
+[node name="MegaBlockAction" type="Node" parent="."]
+script = ExtResource("6_n5td2")
+intent = SubResource("Resource_xxfhx")
+sound = ExtResource("11_21c5q")

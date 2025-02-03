@@ -1,0 +1,83 @@
+[gd_scene load_steps=20 format=3 uid="uid://c0wpux7tibp27"]
+
+[ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_7j7go"]
+[ext_resource type="Script" path="res://enemies/data/mac_flooding.gd" id="2_7y1fe"]
+[ext_resource type="Script" path="res://enemies/data/mac_spoofing.gd" id="3_56rfh"]
+[ext_resource type="Texture2D" uid="uid://bmudpl1v1abps" path="res://kenney_roguelike-characters/Spritesheet/cable_guarding.png" id="3_la2gl"]
+[ext_resource type="Script" path="res://enemies/data/arp_poisoning.gd" id="4_0hkmv"]
+[ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_ek5b7"]
+[ext_resource type="Script" path="res://enemies/data/virus_block_action.gd" id="5_8vadb"]
+[ext_resource type="Script" path="res://enemies/data/virus_mega_block_action.gd" id="6_t07h5"]
+[ext_resource type="Texture2D" uid="uid://coasovla6i54r" path="res://kenney_roguelike-characters/Spritesheet/physical_security.png" id="7_kc31b"]
+[ext_resource type="Texture2D" uid="uid://bnoe21latb3a8" path="res://kenney_roguelike-characters/Spritesheet/block.png" id="9_uyriu"]
+[ext_resource type="AudioStream" uid="uid://dspqcf81x3gsh" path="res://sounds/22_Slash_04.wav" id="10_xdpus"]
+[ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="12_mshvl"]
+[ext_resource type="AudioStream" uid="uid://dncx2feg3vrlr" path="res://RPG_Essentials_Free/10_Battle_SFX/39_Block_03.wav" id="14_d7ekv"]
+[ext_resource type="Texture2D" uid="uid://qxqofct7nmx" path="res://kenney_roguelike-characters/Spritesheet/megablock.png" id="14_q4qbw"]
+
+[sub_resource type="Resource" id="Resource_gnvwk"]
+script = ExtResource("4_ek5b7")
+number = "8"
+icon = ExtResource("3_la2gl")
+
+[sub_resource type="Resource" id="Resource_u544s"]
+script = ExtResource("4_ek5b7")
+number = "8"
+icon = ExtResource("7_kc31b")
+
+[sub_resource type="Resource" id="Resource_uxk2r"]
+script = ExtResource("4_ek5b7")
+number = "8"
+icon = ExtResource("9_uyriu")
+
+[sub_resource type="Resource" id="Resource_w8wga"]
+script = ExtResource("4_ek5b7")
+number = "6"
+icon = ExtResource("9_uyriu")
+
+[sub_resource type="Resource" id="Resource_d1tey"]
+script = ExtResource("4_ek5b7")
+number = "15"
+icon = ExtResource("14_q4qbw")
+
+[node name="DataEnemyAI" type="Node"]
+script = ExtResource("1_7j7go")
+
+[node name="MACFlooding" type="Node" parent="."]
+script = ExtResource("2_7y1fe")
+damage = 8
+intent = SubResource("Resource_gnvwk")
+sound = ExtResource("10_xdpus")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="MACSpoofing" type="Node" parent="."]
+script = ExtResource("3_56rfh")
+damage = 8
+intent = SubResource("Resource_u544s")
+sound = ExtResource("10_xdpus")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="ARPPoisoning" type="Node" parent="."]
+script = ExtResource("4_0hkmv")
+damage = 8
+intent = SubResource("Resource_uxk2r")
+sound = ExtResource("10_xdpus")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="BlockAction" type="Node" parent="."]
+script = ExtResource("5_8vadb")
+intent = SubResource("Resource_w8wga")
+sound = ExtResource("12_mshvl")
+type = 1
+chance_weight = 1.0
+
+[node name="MegaBlockAction" type="Node" parent="."]
+script = ExtResource("6_t07h5")
+intent = SubResource("Resource_d1tey")
+sound = ExtResource("14_d7ekv")

@@ -13,11 +13,13 @@ const TRANSPORT_DECK := preload("res://characters/warrior/warrior_transport_deck
 
 @export var run_startup: RunStartup
 @export var current_layer: CurrentLayer
+@export var points: int = 0
 
 @onready var map: Control = $Map
 @onready var current_view: Node = $CurrentView
 @onready var battle_button: Button = $"%BattleButton"
 @onready var map_button: Button = $"%MapButton"
+@onready var points_ui: PointsUI = $PointsUI
 
 var prev_battle: BattleStats
 
@@ -60,6 +62,7 @@ func _setup_event_connections() -> void:
 	Events.battle_won.connect(_on_battle_win)
 	Events.battle_lost.connect(_on_battle_lost)
 	Events.map_exited.connect(_on_map_exited)
+	Events.points_changed.connect(_on_points_changed)
 	
 	battle_button.pressed.connect(_change_view.bind(BATTLE_SCENE))
 	map_button.pressed.connect(_show_map)
@@ -128,9 +131,15 @@ func _on_battle_win() -> void:
 		prev_battle = new_battle_scene.battle_stats
 		new_battle_scene.start_battle()
 	else:
+		points += 1
+		Events.points_changed.emit(points)
 		_show_map()
 	
 func _on_battle_lost() -> void:
 	get_tree().paused = false
 	print("battle lost")
 	_show_map()
+
+func _on_points_changed(points: int) -> void:
+	points_ui.set_points(points)
+	

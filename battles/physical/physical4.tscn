@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://5xlyxwe3xlsk"]
 
 [ext_resource type="PackedScene" uid="uid://4srs7kh73kaq" path="res://scenes/enemy/enemy.tscn" id="1_18822"]
-[ext_resource type="Resource" uid="uid://xf54827v0lv1" path="res://enemies/virus/virus_enemy.tres" id="2_og0cx"]
+[ext_resource type="Resource" uid="uid://b1d5mli077tqm" path="res://enemies/physical/physical_enemy2.tres" id="2_hciau"]
 
 [node name="Physical4" type="Node2D"]
 
 [node name="Enemy" parent="." instance=ExtResource("1_18822")]
 position = Vector2(1550, 530)
-stats = ExtResource("2_og0cx")
+stats = ExtResource("2_hciau")

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyStats" load_steps=4 format=3 uid="uid://ctppbl0tyw48g"]
+
+[ext_resource type="PackedScene" uid="uid://butsjaru1udf5" path="res://enemies/session/session_enemy_ai.tscn" id="1_47mn2"]
+[ext_resource type="Texture2D" uid="uid://bajre4wu0msxe" path="res://kenney_roguelike-characters/Spritesheet/enemy.png" id="2_g304p"]
+[ext_resource type="Script" path="res://custom_resources/enemy_stats.gd" id="3_5ijq1"]
+
+[resource]
+script = ExtResource("3_5ijq1")
+ai = ExtResource("1_47mn2")
+max_health = 12
+art = ExtResource("2_g304p")

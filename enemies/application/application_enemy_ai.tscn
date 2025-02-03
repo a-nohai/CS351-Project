@@ -1,0 +1,82 @@
+[gd_scene load_steps=19 format=3 uid="uid://d1w8meghlnyy1"]
+
+[ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_cxi4i"]
+[ext_resource type="Script" path="res://enemies/application/sql_injection.gd" id="2_dvwik"]
+[ext_resource type="Texture2D" uid="uid://bmudpl1v1abps" path="res://kenney_roguelike-characters/Spritesheet/cable_guarding.png" id="3_q4pnq"]
+[ext_resource type="Script" path="res://enemies/application/cross_site_scripting.gd" id="3_xbmm8"]
+[ext_resource type="Script" path="res://enemies/application/phishing.gd" id="4_dpw34"]
+[ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_p572r"]
+[ext_resource type="Script" path="res://enemies/application/virus_block_action.gd" id="5_x7mm0"]
+[ext_resource type="Script" path="res://enemies/application/virus_mega_block_action.gd" id="6_8wgm4"]
+[ext_resource type="Texture2D" uid="uid://coasovla6i54r" path="res://kenney_roguelike-characters/Spritesheet/physical_security.png" id="7_3ip0a"]
+[ext_resource type="Texture2D" uid="uid://bnoe21latb3a8" path="res://kenney_roguelike-characters/Spritesheet/block.png" id="9_fqs8g"]
+[ext_resource type="AudioStream" uid="uid://dspqcf81x3gsh" path="res://sounds/22_Slash_04.wav" id="10_ojxib"]
+[ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="12_jg7c0"]
+[ext_resource type="Texture2D" uid="uid://qxqofct7nmx" path="res://kenney_roguelike-characters/Spritesheet/megablock.png" id="14_pyxlw"]
+
+[sub_resource type="Resource" id="Resource_67syx"]
+script = ExtResource("4_p572r")
+number = "8"
+icon = ExtResource("7_3ip0a")
+
+[sub_resource type="Resource" id="Resource_bqd7q"]
+script = ExtResource("4_p572r")
+number = "8"
+icon = ExtResource("9_fqs8g")
+
+[sub_resource type="Resource" id="Resource_bhnd8"]
+script = ExtResource("4_p572r")
+number = "8"
+icon = ExtResource("3_q4pnq")
+
+[sub_resource type="Resource" id="Resource_4w23k"]
+script = ExtResource("4_p572r")
+number = "6"
+icon = ExtResource("9_fqs8g")
+
+[sub_resource type="Resource" id="Resource_dv0fh"]
+script = ExtResource("4_p572r")
+number = "15"
+icon = ExtResource("14_pyxlw")
+
+[node name="ApplicationEnemyAI" type="Node"]
+script = ExtResource("1_cxi4i")
+
+[node name="SQLInjection" type="Node" parent="."]
+script = ExtResource("2_dvwik")
+damage = 8
+intent = SubResource("Resource_67syx")
+sound = ExtResource("10_ojxib")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="CrossSiteScripting" type="Node" parent="."]
+script = ExtResource("3_xbmm8")
+damage = 8
+intent = SubResource("Resource_bqd7q")
+sound = ExtResource("10_ojxib")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="Phishing" type="Node" parent="."]
+script = ExtResource("4_dpw34")
+damage = 8
+intent = SubResource("Resource_bhnd8")
+sound = ExtResource("10_ojxib")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="BlockAction" type="Node" parent="."]
+script = ExtResource("5_x7mm0")
+intent = SubResource("Resource_4w23k")
+sound = ExtResource("12_jg7c0")
+type = 1
+chance_weight = 1.0
+
+[node name="MegaBlockAction" type="Node" parent="."]
+script = ExtResource("6_8wgm4")
+intent = SubResource("Resource_dv0fh")
+sound = ExtResource("12_jg7c0")

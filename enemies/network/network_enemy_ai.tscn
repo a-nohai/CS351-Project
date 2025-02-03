@@ -1,0 +1,84 @@
+[gd_scene load_steps=20 format=3 uid="uid://bhmj061e8rt8i"]
+
+[ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_senws"]
+[ext_resource type="Script" path="res://enemies/network/ip_spoofing.gd" id="2_ueedy"]
+[ext_resource type="Script" path="res://enemies/network/ddos.gd" id="3_1p4ao"]
+[ext_resource type="Texture2D" uid="uid://coasovla6i54r" path="res://kenney_roguelike-characters/Spritesheet/physical_security.png" id="3_x82vo"]
+[ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_kjaui"]
+[ext_resource type="Script" path="res://enemies/network/routing_table_poisoning.gd" id="4_viv0w"]
+[ext_resource type="AudioStream" uid="uid://dspqcf81x3gsh" path="res://sounds/22_Slash_04.wav" id="5_46g71"]
+[ext_resource type="Script" path="res://enemies/network/virus_block_action.gd" id="5_fj7lg"]
+[ext_resource type="Script" path="res://enemies/network/virus_mega_block_action.gd" id="6_nxtin"]
+[ext_resource type="Texture2D" uid="uid://bmudpl1v1abps" path="res://kenney_roguelike-characters/Spritesheet/cable_guarding.png" id="7_gpxh7"]
+[ext_resource type="Texture2D" uid="uid://bnoe21latb3a8" path="res://kenney_roguelike-characters/Spritesheet/block.png" id="9_ssyca"]
+[ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="11_bqi8k"]
+[ext_resource type="Texture2D" uid="uid://qxqofct7nmx" path="res://kenney_roguelike-characters/Spritesheet/megablock.png" id="13_66v8y"]
+[ext_resource type="AudioStream" uid="uid://dncx2feg3vrlr" path="res://RPG_Essentials_Free/10_Battle_SFX/39_Block_03.wav" id="14_pxqw5"]
+
+[sub_resource type="Resource" id="Resource_yhx5h"]
+script = ExtResource("4_kjaui")
+number = "8"
+icon = ExtResource("3_x82vo")
+
+[sub_resource type="Resource" id="Resource_jcekd"]
+script = ExtResource("4_kjaui")
+number = "8"
+icon = ExtResource("7_gpxh7")
+
+[sub_resource type="Resource" id="Resource_vp12m"]
+script = ExtResource("4_kjaui")
+number = "8"
+icon = ExtResource("9_ssyca")
+
+[sub_resource type="Resource" id="Resource_1ig3a"]
+script = ExtResource("4_kjaui")
+number = "6"
+icon = ExtResource("9_ssyca")
+
+[sub_resource type="Resource" id="Resource_rqp7l"]
+script = ExtResource("4_kjaui")
+number = "15"
+icon = ExtResource("13_66v8y")
+
+[node name="NetworkEnemyAI" type="Node"]
+script = ExtResource("1_senws")
+
+[node name="IPSpoofing" type="Node" parent="."]
+script = ExtResource("2_ueedy")
+damage = 8
+intent = SubResource("Resource_yhx5h")
+sound = ExtResource("5_46g71")
+type = 1
+isAttack = true
+chance_weight = 10.0
+
+[node name="DDoS" type="Node" parent="."]
+script = ExtResource("3_1p4ao")
+damage = 8
+intent = SubResource("Resource_jcekd")
+sound = ExtResource("5_46g71")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="RoutingTablePoisoning" type="Node" parent="."]
+script = ExtResource("4_viv0w")
+damage = 8
+intent = SubResource("Resource_vp12m")
+sound = ExtResource("5_46g71")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="BlockAction" type="Node" parent="."]
+script = ExtResource("5_fj7lg")
+intent = SubResource("Resource_1ig3a")
+sound = ExtResource("11_bqi8k")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="MegaBlockAction" type="Node" parent="."]
+script = ExtResource("6_nxtin")
+intent = SubResource("Resource_rqp7l")
+sound = ExtResource("14_pxqw5")

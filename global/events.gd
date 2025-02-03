@@ -26,6 +26,7 @@ signal mcq_screen_requested(question_text: String, correct_index: int, options: 
 signal mcq_answered(correct: bool)
 signal battle_won
 signal battle_lost
+signal points_changed
 
 #Map-related events
 signal map_exited

@@ -1,7 +1,7 @@
 extends EnemyAction
 
 @export var damage := 7
-@export var required_defence = "dynamic_arp"
+@export var required_defence = "shielding"
 
 func perform_action() -> void:
 	if not enemy or not target:

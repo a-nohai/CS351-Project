@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dt0ld4qdjq8qk"]
+[gd_scene load_steps=6 format=3 uid="uid://dt0ld4qdjq8qk"]
 
 [ext_resource type="Script" path="res://scenes/run/run.gd" id="1_ig1d8"]
 [ext_resource type="Resource" uid="uid://su3qn31cihea" path="res://scenes/run/run_startup.tres" id="2_23ygx"]
 [ext_resource type="PackedScene" uid="uid://d1e2t6jtqxlan" path="res://scenes/map/map.tscn" id="2_qh3lo"]
 [ext_resource type="Resource" uid="uid://cat3ax5exrduk" path="res://scenes/run/current_layer.tres" id="3_0kf6c"]
+[ext_resource type="PackedScene" uid="uid://biuo632rooay5" path="res://scenes/ui/points_ui.tscn" id="5_60r6o"]
 
 [node name="Run" type="Node"]
 script = ExtResource("1_ig1d8")
@@ -28,3 +29,5 @@ text = "Map"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Battle"
+
+[node name="PointsUI" parent="." instance=ExtResource("5_60r6o")]

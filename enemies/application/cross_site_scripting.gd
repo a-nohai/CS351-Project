@@ -1,7 +1,7 @@
 extends EnemyAction
 
 @export var damage := 7
-@export var required_defence = "vlan_seg"
+@export var required_defence = "web_firewall"
 
 func perform_action() -> void:
 	if not enemy or not target:
