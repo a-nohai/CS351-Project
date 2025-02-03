@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="BattleStats" load_steps=3 format=3 uid="uid://lccrw60dkktt"]
+
+[ext_resource type="PackedScene" uid="uid://cb0ev0ivsi6d8" path="res://battles/network/network3.tscn" id="1_jbnw0"]
+[ext_resource type="Script" path="res://custom_resources/battle_stats.gd" id="2_x8f7d"]
+
+[resource]
+script = ExtResource("2_x8f7d")
+enemies = ExtResource("1_jbnw0")
+final_battle = false

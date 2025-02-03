@@ -10,11 +10,11 @@ enum Type {WIN, LOSE}
 
 func _ready() -> void:
 	continue_button.pressed.connect(func(): Events.battle_won.emit())
-	restart_button.pressed.connect(get_tree().reload_current_scene)
+	restart_button.pressed.connect(func(): Events.battle_lost.emit())
 	Events.battle_over_screen_requested.connect(show_screen)
 
 
-func show_screen(text: String, type: Type) -> void:
+func show_screen(text: String, type: Type) -> void:    
 	label.text = text
 	continue_button.visible = type == Type.WIN
 	restart_button.visible = type == Type.LOSE

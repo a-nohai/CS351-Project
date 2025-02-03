@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://c1s8n3fc4m3g2"]
+
+[ext_resource type="Texture2D" uid="uid://coasovla6i54r" path="res://kenney_roguelike-characters/Spritesheet/physical_security.png" id="1_6yqm0"]
+[ext_resource type="Script" path="res://characters/warrior/cards/physical/physical_security.gd" id="2_vqi0y"]
+[ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="3_rhy2d"]
+
+[resource]
+script = ExtResource("2_vqi0y")
+id = "format_validation"
+type = 1
+target = 0
+cost = 1
+icon = ExtResource("1_6yqm0")
+tooltip_text = "[center][color=\"0044ff\"]Format Validation[/color].[/center]"
+sound = ExtResource("3_rhy2d")

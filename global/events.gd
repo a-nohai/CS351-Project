@@ -25,6 +25,7 @@ signal battle_over_screen_requested(text: String, type: BattleOverPanel.Type)
 signal mcq_screen_requested(question_text: String, correct_index: int, options: Array)
 signal mcq_answered(correct: bool)
 signal battle_won
+signal battle_lost
 
 #Map-related events
 signal map_exited

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=4 format=3 uid="uid://dl385bi58cnji"]
+
+[ext_resource type="Texture2D" uid="uid://coasovla6i54r" path="res://kenney_roguelike-characters/Spritesheet/physical_security.png" id="1_nngkh"]
+[ext_resource type="Script" path="res://characters/warrior/cards/physical/physical_security.gd" id="2_cwmcv"]
+[ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="3_bitn8"]
+
+[resource]
+script = ExtResource("2_cwmcv")
+id = "session_encryption"
+type = 1
+target = 0
+cost = 1
+icon = ExtResource("1_nngkh")
+tooltip_text = "[center][color=\"0044ff\"]Session Encryption[/color].[/center]"
+sound = ExtResource("3_bitn8")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://f41b8abvg2jl" path="res://kenney_roguelike-characters/Spritesheet/warrior.png" id="1_5vioy"]
 [ext_resource type="Script" path="res://custom_resources/character_stats.gd" id="1_7hmnx"]
-[ext_resource type="Resource" uid="uid://c14e54u1jjvdf" path="res://characters/warrior/warrior_starting_deck.tres" id="3_2v25r"]
+[ext_resource type="Resource" uid="uid://c14e54u1jjvdf" path="res://characters/warrior/warrior_physical_deck.tres" id="3_2v25r"]
 
 [resource]
 script = ExtResource("1_7hmnx")

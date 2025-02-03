@@ -3,32 +3,595 @@
 		"layer": "Physical",
 		"questionset": [
 			{
-				"question" : "What is the best way to prevent wiretapping?" ,
-				"answers" : ["Cable Locking","Port Security", "Shielding", "Network Encryption"],
-				"correct_option" : "Cable Locking"
+				"question": "What physical security measure helps prevent unauthorized access to server rooms?",
+				"answers": [
+					"Biometric authentication",
+					"Port mirroring",
+					"MAC filtering",
+					"Firewalls"
+				],
+				"correct_option": "Biometric authentication"
 			},
 			{
-				"question" : "How can you protect against jamming attacks?" ,
-				"answers" : ["Implement frequency hopping", "Use tamper-proof locks", "Disable unused ports", "Enable MAC filtering"],
-				"correct_option" : "Implement frequency hopping"
+				"question": "What is the most effective way to prevent unauthorized access to network cables?",
+				"answers": [
+					"Cable shielding",
+					"Port security",
+					"MAC filtering",
+					"Disabling SSID broadcast"
+				],
+				"correct_option": "Cable shielding"
+			},
+			{
+				"question": "Which of the following is an example of a physical security control?",
+				"answers": [
+					"Firewall",
+					"Intrusion Detection System",
+					"Security Guards",
+					"Data Encryption"
+				],
+				"correct_option": "Security Guards"
+			},
+			{
+				"question": "How can electromagnetic interference (EMI) be minimized in network cables?",
+				"answers": [
+					"Using shielded cables",
+					"Disabling unused ports",
+					"Implementing VLANs",
+					"Using strong passwords"
+				],
+				"correct_option": "Using shielded cables"
+			},
+			{
+				"question": "What is an example of a physical layer attack?",
+				"answers": [
+					"Wiretapping",
+					"Session Hijacking",
+					"SQL Injection",
+					"DNS Spoofing"
+				],
+				"correct_option": "Wiretapping"
+			},
+			{
+				"question": "How can you prevent a man-in-the-middle attack at the physical layer?",
+				"answers": [
+					"Using fiber optic cables",
+					"Configuring strong passwords",
+					"Disabling unused ports",
+					"Enabling firewall rules"
+				],
+				"correct_option": "Using fiber optic cables"
+			},
+			{
+				"question": "What physical measure can help mitigate the risk of hardware theft?",
+				"answers": [
+					"Using cable locks",
+					"Implementing VLANs",
+					"Enabling encryption",
+					"Using strong passwords"
+				],
+				"correct_option": "Using cable locks"
+			},
+			{
+				"question": "What is the best way to secure network cables against damage?",
+				"answers": [
+					"Using cable management systems",
+					"Implementing port security",
+					"Configuring access control lists",
+					"Using SSL encryption"
+				],
+				"correct_option": "Using cable management systems"
 			}
-			
 		]
 	},
 	{
 		"layer": "Data Link",
 		"questionset": [
 			{
-				"question" : "What does dynamic ARP inspection (DAI) help prevent?" ,
-				"answers" : ["ARP Spoofing", "MAC Flooding", "IP spoofing", "SYN Flood"],
-				"correct_option" : "ARP Spoofing"
+				"question": "What technique helps prevent MAC address spoofing?",
+				"answers": [
+					"Port Security",
+					"Firewalls",
+					"Data Encryption",
+					"Frequency Hopping"
+				],
+				"correct_option": "Port Security"
 			},
 			{
-				"question" : "Which method limits the number of devices on a switch port?" ,
-				"answers" : ["Port security", "route isolation", "frequency hopping", "ssl encryption"],
-				"correct_option" : "Port security"
+				"question": "What is the primary purpose of VLANs at the data link layer?",
+				"answers": [
+					"Segmenting networks",
+					"Encrypting data",
+					"Improving data compression",
+					"Blocking IP addresses"
+				],
+				"correct_option": "Segmenting networks"
+			},
+			{
+				"question": "What attack targets the data link layer by overwhelming a switch\u2019s MAC table?",
+				"answers": [
+					"MAC Flooding",
+					"Phishing",
+					"IP Spoofing",
+					"Session Hijacking"
+				],
+				"correct_option": "MAC Flooding"
+			},
+			{
+				"question": "How does 802.1X authentication enhance network security?",
+				"answers": [
+					"Prevents unauthorized access",
+					"Encrypts all network data",
+					"Speeds up data transmission",
+					"Blocks spam emails"
+				],
+				"correct_option": "Prevents unauthorized access"
+			},
+			{
+				"question": "What is the main function of a switch in the data link layer?",
+				"answers": [
+					"Filter and forward frames",
+					"Encrypt data packets",
+					"Route IP traffic",
+					"Perform network address translation"
+				],
+				"correct_option": "Filter and forward frames"
+			},
+			{
+				"question": "How does Address Resolution Protocol (ARP) function?",
+				"answers": [
+					"Maps IP addresses to MAC addresses",
+					"Encrypts data at the network layer",
+					"Blocks malware from accessing the network",
+					"Provides a secure connection to VPNs"
+				],
+				"correct_option": "Maps IP addresses to MAC addresses"
+			},
+			{
+				"question": "What protocol is used to detect and mitigate ARP spoofing?",
+				"answers": [
+					"Dynamic ARP Inspection (DAI)",
+					"DNSSEC",
+					"IPSec",
+					"SSL/TLS"
+				],
+				"correct_option": "Dynamic ARP Inspection (DAI)"
+			},
+			{
+				"question": "What is a defense against VLAN hopping attacks?",
+				"answers": [
+					"Disabling Dynamic Trunking Protocol (DTP)",
+					"Using stronger passwords",
+					"Enabling MAC filtering",
+					"Configuring a firewall"
+				],
+				"correct_option": "Disabling Dynamic Trunking Protocol (DTP)"
 			}
-			
+		]
+	},
+	{
+		"layer": "Network",
+		"questionset": [
+			{
+				"question": "What is the primary function of the network layer?",
+				"answers": [
+					"Routing data packets",
+					"Encrypting data",
+					"Establishing sessions",
+					"Managing file transfers"
+				],
+				"correct_option": "Routing data packets"
+			},
+			{
+				"question": "Which protocol is used for logical addressing at the network layer?",
+				"answers": [
+					"IP",
+					"MAC",
+					"TCP",
+					"UDP"
+				],
+				"correct_option": "IP"
+			},
+			{
+				"question": "What attack manipulates IP packet fragmentation to evade security measures?",
+				"answers": [
+					"IP Fragmentation Attack",
+					"Man-in-the-Middle Attack",
+					"SQL Injection",
+					"MAC Spoofing"
+				],
+				"correct_option": "IP Fragmentation Attack"
+			},
+			{
+				"question": "Which device operates at the network layer?",
+				"answers": [
+					"Router",
+					"Switch",
+					"Hub",
+					"Repeater"
+				],
+				"correct_option": "Router"
+			},
+			{
+				"question": "What security measure helps prevent IP spoofing?",
+				"answers": [
+					"Ingress filtering",
+					"MAC filtering",
+					"Firewalls",
+					"Data encryption"
+				],
+				"correct_option": "Ingress filtering"
+			},
+			{
+				"question": "Which protocol is commonly used for error reporting in the network layer?",
+				"answers": [
+					"ICMP",
+					"DNS",
+					"HTTP",
+					"ARP"
+				],
+				"correct_option": "ICMP"
+			},
+			{
+				"question": "What is a characteristic of the IPv6 protocol?",
+				"answers": [
+					"Larger address space",
+					"Uses 32-bit addresses",
+					"Does not support multicasting",
+					"Requires NAT"
+				],
+				"correct_option": "Larger address space"
+			},
+			{
+				"question": "What is the purpose of subnetting?",
+				"answers": [
+					"Efficient IP address allocation",
+					"Encrypting data",
+					"Preventing DDoS attacks",
+					"Increasing latency"
+				],
+				"correct_option": "Efficient IP address allocation"
+			}
+		]
+	},
+	{
+		"layer": "Transport",
+		"questionset": [
+			{
+				"question": "What is the main function of the transport layer?",
+				"answers": [
+					"Ensuring reliable data transfer",
+					"Routing packets",
+					"Managing IP addresses",
+					"Encrypting data"
+				],
+				"correct_option": "Ensuring reliable data transfer"
+			},
+			{
+				"question": "Which protocol provides reliable, connection-oriented communication?",
+				"answers": [
+					"TCP",
+					"UDP",
+					"IP",
+					"ICMP"
+				],
+				"correct_option": "TCP"
+			},
+			{
+				"question": "What is a characteristic of UDP?",
+				"answers": [
+					"Connectionless communication",
+					"Guaranteed delivery",
+					"Slow transmission",
+					"Error correction"
+				],
+				"correct_option": "Connectionless communication"
+			},
+			{
+				"question": "What mechanism does TCP use to ensure data is received in order?",
+				"answers": [
+					"Sequencing",
+					"Encryption",
+					"Compression",
+					"NAT"
+				],
+				"correct_option": "Sequencing"
+			},
+			{
+				"question": "Which attack exploits the TCP three-way handshake process?",
+				"answers": [
+					"SYN Flood",
+					"MAC Spoofing",
+					"SQL Injection",
+					"Phishing"
+				],
+				"correct_option": "SYN Flood"
+			},
+			{
+				"question": "What transport layer feature allows multiple applications to use the network simultaneously?",
+				"answers": [
+					"Port numbers",
+					"IP addresses",
+					"Subnetting",
+					"Packet switching"
+				],
+				"correct_option": "Port numbers"
+			},
+			{
+				"question": "Which layer 4 protocol is preferred for real-time applications like VoIP?",
+				"answers": [
+					"UDP",
+					"TCP",
+					"ICMP",
+					"HTTP"
+				],
+				"correct_option": "UDP"
+			},
+			{
+				"question": "What is the purpose of flow control in the transport layer?",
+				"answers": [
+					"Prevent network congestion",
+					"Increase bandwidth",
+					"Encrypt data",
+					"Improve routing"
+				],
+				"correct_option": "Prevent network congestion"
+			}
+		]
+	},
+	{
+		"layer": "Session",
+		"questionset": [
+			{
+				"question": "What is the primary function of the session layer?",
+				"answers": [
+					"Managing communication sessions",
+					"Routing packets",
+					"Encrypting data",
+					"Error detection"
+				],
+				"correct_option": "Managing communication sessions"
+			},
+			{
+				"question": "Which protocol is commonly used for session establishment in secure communication?",
+				"answers": [
+					"TLS",
+					"IP",
+					"ICMP",
+					"ARP"
+				],
+				"correct_option": "TLS"
+			},
+			{
+				"question": "What session layer concept allows a communication session to be resumed after an interruption?",
+				"answers": [
+					"Checkpointing",
+					"Flow control",
+					"Port forwarding",
+					"Encapsulation"
+				],
+				"correct_option": "Checkpointing"
+			},
+			{
+				"question": "Which of the following operates at the session layer?",
+				"answers": [
+					"NetBIOS",
+					"TCP",
+					"IP",
+					"Ethernet"
+				],
+				"correct_option": "NetBIOS"
+			},
+			{
+				"question": "Which session layer attack can hijack an active session?",
+				"answers": [
+					"Session hijacking",
+					"Phishing",
+					"ARP spoofing",
+					"MAC flooding"
+				],
+				"correct_option": "Session hijacking"
+			},
+			{
+				"question": "What protocol does the session layer use to maintain a secure connection?",
+				"answers": [
+					"SSL/TLS",
+					"UDP",
+					"HTTP",
+					"DHCP"
+				],
+				"correct_option": "SSL/TLS"
+			},
+			{
+				"question": "Which feature of the session layer ensures multiple conversations between devices are kept separate?",
+				"answers": [
+					"Dialog control",
+					"Flow control",
+					"Error correction",
+					"Data encapsulation"
+				],
+				"correct_option": "Dialog control"
+			},
+			{
+				"question": "How does session layer authentication enhance security?",
+				"answers": [
+					"Verifies user identity before session establishment",
+					"Encrypts all data packets",
+					"Blocks phishing attacks",
+					"Manages IP addresses"
+				],
+				"correct_option": "Verifies user identity before session establishment"
+			}
+		]
+	},
+	{
+		"layer": "Presentation",
+		"questionset": [
+			{
+				"question": "What is the primary function of the presentation layer?",
+				"answers": [
+					"Data translation and encryption",
+					"Routing packets",
+					"Managing session control",
+					"Assigning IP addresses"
+				],
+				"correct_option": "Data translation and encryption"
+			},
+			{
+				"question": "Which of the following is an example of a data format handled by the presentation layer?",
+				"answers": [
+					"JPEG",
+					"IP",
+					"MAC address",
+					"TCP"
+				],
+				"correct_option": "JPEG"
+			},
+			{
+				"question": "What security service does the presentation layer provide?",
+				"answers": [
+					"Data encryption",
+					"Flow control",
+					"Session multiplexing",
+					"Port filtering"
+				],
+				"correct_option": "Data encryption"
+			},
+			{
+				"question": "Which protocol is responsible for secure web communication at the presentation layer?",
+				"answers": [
+					"SSL/TLS",
+					"ICMP",
+					"ARP",
+					"FTP"
+				],
+				"correct_option": "SSL/TLS"
+			},
+			{
+				"question": "What is the main purpose of data compression at the presentation layer?",
+				"answers": [
+					"Reduce file size for transmission",
+					"Enhance encryption",
+					"Improve routing speed",
+					"Block unauthorized access"
+				],
+				"correct_option": "Reduce file size for transmission"
+			},
+			{
+				"question": "Which encoding format is commonly used for web pages?",
+				"answers": [
+					"HTML",
+					"IPSec",
+					"DHCP",
+					"DNS"
+				],
+				"correct_option": "HTML"
+			},
+			{
+				"question": "How does the presentation layer ensure data integrity?",
+				"answers": [
+					"By formatting and encrypting data",
+					"By managing network routing",
+					"By controlling session duration",
+					"By assigning logical addresses"
+				],
+				"correct_option": "By formatting and encrypting data"
+			},
+			{
+				"question": "What technique is used at the presentation layer to convert data into a readable format?",
+				"answers": [
+					"Data translation",
+					"Port forwarding",
+					"Address resolution",
+					"Packet switching"
+				],
+				"correct_option": "Data translation"
+			}
+		]
+	},
+	{
+		"layer": "Application",
+		"questionset": [
+			{
+				"question": "What is the main function of the application layer?",
+				"answers": [
+					"Providing network services to applications",
+					"Routing packets",
+					"Managing session establishment",
+					"Encrypting all network traffic"
+				],
+				"correct_option": "Providing network services to applications"
+			},
+			{
+				"question": "Which of the following is an application layer protocol?",
+				"answers": [
+					"HTTP",
+					"TCP",
+					"IP",
+					"ARP"
+				],
+				"correct_option": "HTTP"
+			},
+			{
+				"question": "What protocol is used to send emails?",
+				"answers": [
+					"SMTP",
+					"FTP",
+					"ICMP",
+					"DHCP"
+				],
+				"correct_option": "SMTP"
+			},
+			{
+				"question": "Which protocol allows users to retrieve emails from a mail server?",
+				"answers": [
+					"IMAP",
+					"DNS",
+					"SNMP",
+					"SSL"
+				],
+				"correct_option": "IMAP"
+			},
+			{
+				"question": "Which application layer protocol translates domain names to IP addresses?",
+				"answers": [
+					"DNS",
+					"FTP",
+					"ICMP",
+					"HTTPS"
+				],
+				"correct_option": "DNS"
+			},
+			{
+				"question": "What security risk is associated with HTTP but mitigated by HTTPS?",
+				"answers": [
+					"Data transmitted in plain text",
+					"IP address conflict",
+					"MAC address spoofing",
+					"Network congestion"
+				],
+				"correct_option": "Data transmitted in plain text"
+			},
+			{
+				"question": "Which application layer protocol is used for file transfers over the internet?",
+				"answers": [
+					"FTP",
+					"SMTP",
+					"SNMP",
+					"ARP"
+				],
+				"correct_option": "FTP"
+			},
+			{
+				"question": "How does HTTPS improve security over HTTP?",
+				"answers": [
+					"By encrypting data transmission",
+					"By blocking all malware",
+					"By reducing bandwidth usage",
+					"By compressing network packets"
+				],
+				"correct_option": "By encrypting data transmission"
+			}
 		]
 	}
 ]

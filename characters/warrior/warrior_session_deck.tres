@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardPile" load_steps=7 format=3 uid="uid://dxmusbmrd4ctw"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_lqvba"]
+[ext_resource type="Resource" uid="uid://b3prykff2vpen" path="res://characters/warrior/cards/warrior_axe_attack.tres" id="2_4idsl"]
+[ext_resource type="Resource" uid="uid://b4vpa0gy6lx6o" path="res://characters/warrior/cards/session/rpc_protection.tres" id="3_v4lvi"]
+[ext_resource type="Resource" uid="uid://byy0pw4renlvx" path="res://characters/warrior/cards/session/secure_auth.tres" id="4_6pd0i"]
+[ext_resource type="Resource" uid="uid://cv08kv60w7tpi" path="res://characters/warrior/cards/session/session_timeout.tres" id="5_6qd00"]
+[ext_resource type="Script" path="res://custom_resources/card_pile.gd" id="6_k1ccd"]
+
+[resource]
+script = ExtResource("6_k1ccd")
+cards = Array[ExtResource("1_lqvba")]([ExtResource("2_4idsl"), ExtResource("2_4idsl"), ExtResource("2_4idsl"), ExtResource("2_4idsl"), ExtResource("2_4idsl"), ExtResource("3_v4lvi"), ExtResource("4_6pd0i"), ExtResource("5_6qd00"), ExtResource("5_6qd00"), ExtResource("4_6pd0i")])

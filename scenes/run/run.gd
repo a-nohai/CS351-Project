@@ -3,8 +3,13 @@ extends Node
 
 const BATTLE_SCENE := preload("res://scenes/battle/battle.tscn")
 
-const PHYSICAL_DECK := preload("res://characters/warrior/warrior_starting_deck.tres")
+const PHYSICAL_DECK := preload("res://characters/warrior/warrior_physical_deck.tres")
 const DATA_DECK := preload("res://characters/warrior/warrior_data_deck.tres")
+const APPLICATION_DECK := preload("res://characters/warrior/warrior_application_deck.tres")
+const NETWORK_DECK := preload("res://characters/warrior/warrior_network_deck.tres")
+const PRESENTATION_DECK := preload("res://characters/warrior/warrior_presentation_deck.tres")
+const SESSION_DECK := preload("res://characters/warrior/warrior_session_deck.tres")
+const TRANSPORT_DECK := preload("res://characters/warrior/warrior_transport_deck.tres")
 
 @export var run_startup: RunStartup
 @export var current_layer: CurrentLayer
@@ -53,6 +58,7 @@ func _show_map() -> void:
 
 func _setup_event_connections() -> void:
 	Events.battle_won.connect(_on_battle_win)
+	Events.battle_lost.connect(_on_battle_lost)
 	Events.map_exited.connect(_on_map_exited)
 	
 	battle_button.pressed.connect(_change_view.bind(BATTLE_SCENE))
@@ -67,6 +73,21 @@ func _on_battle_room_entered() -> void:
 		"Data Link":
 			character.deck = DATA_DECK
 			battle_scene.battle_stats = preload("res://battles/data/data1.tres")
+		"Application":
+			character.deck = APPLICATION_DECK
+			battle_scene.battle_stats = preload("res://battles/application/application1.tres")
+		"Network":
+			character.deck = NETWORK_DECK
+			battle_scene.battle_stats = preload("res://battles/network/network1.tres")
+		"Presentation":
+			character.deck = PRESENTATION_DECK
+			battle_scene.battle_stats = preload("res://battles/presentation/presentation1.tres")
+		"Session":
+			character.deck = SESSION_DECK
+			battle_scene.battle_stats = preload("res://battles/session/session1.tres")
+		"Transport":
+			character.deck = TRANSPORT_DECK
+			battle_scene.battle_stats = preload("res://battles/transport/transport1.tres")
 	battle_scene.char_stats = character
 	prev_battle = battle_scene.battle_stats
 	battle_scene.start_battle()
@@ -92,6 +113,16 @@ func _on_battle_win() -> void:
 				character.deck = PHYSICAL_DECK
 			"Data Link":
 				character.deck = DATA_DECK
+			"Application":
+				character.deck = APPLICATION_DECK
+			"Network":
+				character.deck = NETWORK_DECK
+			"Presentation":
+				character.deck = PRESENTATION_DECK
+			"Session":
+				character.deck = SESSION_DECK
+			"Transport":
+				character.deck = TRANSPORT_DECK
 		new_battle_scene.battle_stats = load(new_path)
 		new_battle_scene.char_stats = character
 		prev_battle = new_battle_scene.battle_stats
@@ -99,4 +130,7 @@ func _on_battle_win() -> void:
 	else:
 		_show_map()
 	
-	
+func _on_battle_lost() -> void:
+	get_tree().paused = false
+	print("battle lost")
+	_show_map()
