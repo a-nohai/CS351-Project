@@ -131,15 +131,26 @@ func _on_battle_win() -> void:
 		prev_battle = new_battle_scene.battle_stats
 		new_battle_scene.start_battle()
 	else:
-		points += 1
+		var points_won = 0
+		if character.health >= 27:
+			points_won = 3
+		elif character.health >= 11 and character.health < 27:
+			points_won = 2
+		else:
+			points_won = 1
+		if points_won > current_layer.max_points[current_layer.layer]:
+			points = points - current_layer.max_points[current_layer.layer] + points_won
+			current_layer.set_max_points(points_won, current_layer.layer)
 		Events.points_changed.emit(points)
+		character.set_health(35)
 		_show_map()
 	
 func _on_battle_lost() -> void:
 	get_tree().paused = false
 	print("battle lost")
+	character.set_health(35)
 	_show_map()
 
-func _on_points_changed(points: int) -> void:
-	points_ui.set_points(points)
+func _on_points_changed(added_points: int) -> void:
+	points_ui.set_points(added_points)
 	
