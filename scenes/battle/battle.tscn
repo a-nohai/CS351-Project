@@ -106,10 +106,10 @@ text = "End Turn"
 
 [node name="DefenceUI" parent="BattleUI" instance=ExtResource("16_3t07s")]
 visible = false
-offset_left = 311.0
-offset_top = 159.0
-offset_right = 495.0
-offset_bottom = 343.0
+offset_left = 235.0
+offset_top = 197.0
+offset_right = 561.0
+offset_bottom = 381.0
 
 [node name="RedFlash" type="CanvasLayer" parent="."]
 layer = 2

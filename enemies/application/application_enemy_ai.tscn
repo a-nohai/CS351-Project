@@ -18,26 +18,31 @@
 script = ExtResource("4_p572r")
 number = "8"
 icon = ExtResource("7_3ip0a")
+tooltip_text = "[center][color=0044ff]SQL Injection[/color][/center]"
 
 [sub_resource type="Resource" id="Resource_bqd7q"]
 script = ExtResource("4_p572r")
 number = "8"
 icon = ExtResource("9_fqs8g")
+tooltip_text = ""
 
 [sub_resource type="Resource" id="Resource_bhnd8"]
 script = ExtResource("4_p572r")
 number = "8"
 icon = ExtResource("3_q4pnq")
+tooltip_text = ""
 
 [sub_resource type="Resource" id="Resource_4w23k"]
 script = ExtResource("4_p572r")
 number = "6"
 icon = ExtResource("9_fqs8g")
+tooltip_text = ""
 
 [sub_resource type="Resource" id="Resource_dv0fh"]
 script = ExtResource("4_p572r")
 number = "15"
 icon = ExtResource("14_pyxlw")
+tooltip_text = ""
 
 [node name="ApplicationEnemyAI" type="Node"]
 script = ExtResource("1_cxi4i")

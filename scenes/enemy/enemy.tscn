@@ -43,3 +43,5 @@ offset_bottom = -97.0
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
+[connection signal="mouse_entered" from="IntentUI" to="." method="_on_intent_ui_mouse_entered"]
+[connection signal="mouse_exited" from="IntentUI" to="." method="_on_intent_ui_mouse_exited"]

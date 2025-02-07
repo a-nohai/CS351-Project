@@ -99,6 +99,10 @@ func _on_mcq_result(correct_mcq: bool) -> void:
 	# Perform the action
 	defence_ui.update_block_status(player_handler.defence_type == current_action.required_defence)
 	defence_ui.update_question_status(correct_mcq)
+	if current_action.damage == 0:
+		defence_ui.update_damage(current_action.damage)
+	else:
+		defence_ui.update_damage(current_action.damage - 1)
 	current_action.perform_action()
 	# Reset damage
 	current_action.damage = temp_damage
@@ -127,3 +131,11 @@ func _on_area_entered(_area: Area2D) -> void:
 
 func _on_area_exited(_area: Area2D) -> void:
 	arrow.hide()
+
+
+func _on_intent_ui_mouse_entered() -> void:
+	intent_ui.on_mouse_entered(current_action.intent)
+
+
+func _on_intent_ui_mouse_exited() -> void:
+	intent_ui.on_mouse_exited()

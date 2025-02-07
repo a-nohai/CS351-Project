@@ -16,3 +16,9 @@ func update_intent(intent: Intent) -> void:
 	number.text = str(intent.number)
 	number.visible = intent.number.length() > 0
 	show()
+
+func on_mouse_entered(intent: Intent) -> void:
+	Events.card_tooltip_requested.emit(intent.icon, intent.tooltip_text)
+
+func on_mouse_exited() -> void:
+	Events.tooltip_hide_requested.emit()

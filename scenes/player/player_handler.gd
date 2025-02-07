@@ -31,8 +31,9 @@ func start_turn() -> void:
 	defence_type = null
 	character.block = 0
 	character.reset_mana()
-	defence_ui.reset_ui()
 	draw_cards(character.cards_per_turn)
+	await get_tree().create_timer(1.0).timeout
+	defence_ui.reset_ui()
 
 
 func end_turn() -> void:

@@ -3,6 +3,7 @@ extends HBoxContainer
 
 @onready var block_status = $VBoxContainer/BlockStatus
 @onready var question_status = $VBoxContainer2/QuestionStatus
+@onready var damage = $DamageLabel
 
 # Paths to the icon textures
 var tick_icon = preload("res://kenney_roguelike-characters/Spritesheet/tick.png")
@@ -14,6 +15,7 @@ func reset_ui():
 	visible = false
 	block_status.texture = null
 	question_status.texture = null
+	damage.visible = false
 
 func show_defense_ui():
 	# Show the DefenceUI when a defense card is played
@@ -22,6 +24,7 @@ func show_defense_ui():
 	question_status.texture = hourglass_icon
 	block_status.texture = hourglass_icon
 
+
 func update_block_status(correct: bool):
 	# Update the block status based on whether the defense card was correct
 	block_status.texture = tick_icon if correct else cross_icon
@@ -29,3 +32,7 @@ func update_block_status(correct: bool):
 func update_question_status(correct: bool):
 	# Update the question status based on whether the player answered correctly
 	question_status.texture = tick_icon if correct else cross_icon
+
+func update_damage(amount: int) -> void:
+	damage.text = "= %s \n DMG" % [amount]
+	damage.visible = true
