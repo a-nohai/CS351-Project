@@ -91,6 +91,7 @@ func _on_battle_room_entered() -> void:
 		"Transport":
 			character.deck = TRANSPORT_DECK
 			battle_scene.battle_stats = preload("res://battles/transport/transport1.tres")
+	battle_scene.battle_info.set_layer(current_layer.layer)
 	battle_scene.char_stats = character
 	prev_battle = battle_scene.battle_stats
 	battle_scene.start_battle()
@@ -132,25 +133,40 @@ func _on_battle_win() -> void:
 		new_battle_scene.start_battle()
 	else:
 		var points_won = 0
-		if character.health >= 27:
+		if character.health >= 30:
 			points_won = 3
-		elif character.health >= 11 and character.health < 27:
+		elif character.health >= 18 and character.health < 30:
 			points_won = 2
 		else:
 			points_won = 1
 		if points_won > current_layer.max_points[current_layer.layer]:
 			points = points - current_layer.max_points[current_layer.layer] + points_won
 			current_layer.set_max_points(points_won, current_layer.layer)
+			print(current_layer.layer)
+			map.set_layer_points(current_layer.layer, points_won)
 		Events.points_changed.emit(points)
-		character.set_health(35)
+		character.set_health(character.max_health)
 		_show_map()
 	
 func _on_battle_lost() -> void:
 	get_tree().paused = false
 	print("battle lost")
-	character.set_health(35)
+	character.set_health(character.max_health)
 	_show_map()
 
 func _on_points_changed(added_points: int) -> void:
 	points_ui.set_points(added_points)
+	match added_points:
+		4,5,6:
+			map.enable_button(3)
+		7,8,9:
+			map.enable_button(4)
+		10,11,12:
+			map.enable_button(5)
+		13,14,15,16,17:
+			map.enable_button(6)
+		18,19,20:
+			map.enable_button(7)
+		21:
+			map.enable_button(8)
 	

@@ -1,4 +1,4 @@
-class_name Battle
+class_name TutorialBattle
 extends Node2D
 
 @export var battle_stats: BattleStats

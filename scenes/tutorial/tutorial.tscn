@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://fafjaq3n0qlf"]
+
+[ext_resource type="Script" path="res://scenes/tutorial/tutorial.gd" id="1_7cwr8"]
+[ext_resource type="Script" path="res://custom_resources/run_startup.gd" id="2_e7ojc"]
+[ext_resource type="PackedScene" uid="uid://cp4cykuwm3ajn" path="res://scenes/tutorial/tut_map.tscn" id="2_ftc47"]
+[ext_resource type="PackedScene" uid="uid://biuo632rooay5" path="res://scenes/ui/points_ui.tscn" id="3_a0okm"]
+[ext_resource type="Script" path="res://custom_resources/current_layer.gd" id="3_jejij"]
+
+[sub_resource type="Resource" id="Resource_c88pc"]
+script = ExtResource("2_e7ojc")
+type = 0
+
+[sub_resource type="Resource" id="Resource_e0pdh"]
+script = ExtResource("3_jejij")
+layer = "Physical"
+max_points = {
+"Application": 0,
+"Data Link": 0,
+"Network": 0,
+"Physical": 0,
+"Presentation": 0,
+"Session": 0,
+"Transport": 0
+}
+
+[node name="Tutorial" type="Node"]
+script = ExtResource("1_7cwr8")
+run_startup = SubResource("Resource_c88pc")
+current_layer = SubResource("Resource_e0pdh")
+
+[node name="TutorialMap" parent="." instance=ExtResource("2_ftc47")]
+
+[node name="CurrentView" type="Node" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -98.0
+offset_right = 140.0
+grow_vertical = 0
+
+[node name="MapButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Map"
+
+[node name="BattleButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Battle"
+
+[node name="PointsUI" parent="." instance=ExtResource("3_a0okm")]
+visible = false

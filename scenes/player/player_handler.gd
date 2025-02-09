@@ -7,6 +7,7 @@ const HAND_DISCARD_INTERVAL := 0.25
 enum Type{ATTACK, DEFEND, POWER}
 
 @onready var defence_ui = $"../BattleUI/DefenceUI"
+@onready var battle_info = $"../BattleUI/BattleInfo"
 
 @export var hand: Hand
 
@@ -37,6 +38,7 @@ func start_turn() -> void:
 
 
 func end_turn() -> void:
+	battle_info.set_turn("Enemy")
 	hand.disable_hand()
 	discard_cards()
 	
@@ -87,6 +89,9 @@ func _on_card_played(card: Card) -> void:
 		character.set_mana(character.mana+1)
 		character.set_block(character.block-1)
 		print("can only play one defence card")
+		Events.card_tooltip_requested.emit(null,"[center]You can only play one defence card![center]")
+		await get_tree().create_timer(1.0).timeout
+		Events.tooltip_hide_requested.emit()
 		return
 	if card.type == Type.DEFEND:
 		played_defence = true

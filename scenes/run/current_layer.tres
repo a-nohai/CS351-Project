@@ -4,4 +4,13 @@
 
 [resource]
 script = ExtResource("1_2wb5n")
-layer = ""
+layer = "Physical"
+max_points = {
+"Application": 0,
+"Data Link": 0,
+"Network": 0,
+"Physical": 0,
+"Presentation": 0,
+"Session": 0,
+"Transport": 0
+}

@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://mi8n13lpqgpn"]
+
+[ext_resource type="Theme" uid="uid://b5ncgnmupcgr5" path="res://main_theme.tres" id="1_giuwg"]
+[ext_resource type="Script" path="res://scenes/ui/battle_info.gd" id="2_gdj6y"]
+
+[node name="BattleInfo" type="PanelContainer"]
+offset_right = 394.0
+offset_bottom = 105.0
+theme = ExtResource("1_giuwg")
+script = ExtResource("2_gdj6y")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Physical 
+Layer
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+text = "Enemy 
+Turn
+"
+horizontal_alignment = 1
+vertical_alignment = 1

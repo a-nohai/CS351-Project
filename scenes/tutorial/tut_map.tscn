@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://cp4cykuwm3ajn"]
+
+[ext_resource type="Script" path="res://scenes/tutorial/tut_map.gd" id="1_qphoi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yu4cr"]
+font_size = 72
+
+[sub_resource type="LabelSettings" id="LabelSettings_oqcqn"]
+font_size = 42
+
+[node name="TutorialMap" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_qphoi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.689736, 0.288594, 0.991102, 0.631373)
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -853.0
+offset_top = -440.5
+offset_right = 853.0
+offset_bottom = 440.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 250
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer5"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer5/VBoxContainer"]
+layout_mode = 2
+text = "Choose your layer:"
+label_settings = SubResource("LabelSettings_yu4cr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer5"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="VBoxContainer5/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="Tutorial" type="Label" parent="VBoxContainer5/HBoxContainer/VBoxContainer4"]
+layout_mode = 2
+text = "Tutorial:"
+label_settings = SubResource("LabelSettings_oqcqn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TutorialButton" type="Button" parent="VBoxContainer5/HBoxContainer/VBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "Go
+"
+
+[connection signal="pressed" from="VBoxContainer5/HBoxContainer/VBoxContainer4/TutorialButton" to="." method="_on_button_pressed"]

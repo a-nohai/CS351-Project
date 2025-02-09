@@ -30,6 +30,7 @@ signal points_changed
 
 #Map-related events
 signal map_exited
+signal tutorial_map_exited
 
 #Battle Reward-related events
 signal battle_reward_exited
