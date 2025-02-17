@@ -27,6 +27,7 @@ signal mcq_answered(correct: bool)
 signal battle_won
 signal battle_lost
 signal points_changed
+signal briefing_read
 
 #Map-related events
 signal map_exited

@@ -7,7 +7,10 @@ extends Panel
 @onready var answer4: Button = %Answer4
 @onready var question: Question = %Question
 
+@export var wrong_answers: QuestionData
+
 var correct_answer: int
+var correct_text: String
 
 func _ready() -> void:
 	# Connect the MCQ screen signal
@@ -20,7 +23,7 @@ func _ready() -> void:
 
 func show_screen(text: String, correct: int, options: Array):
 	question.show_question(text)
-
+	correct_text = options[0]
 	# Shuffle the options and update the correct index
 	var shuffled_answers = []
 	var new_correct_index = -1
@@ -64,4 +67,8 @@ func show_screen(text: String, correct: int, options: Array):
 func _on_answer_selected(answer_index: int):
 	hide()
 	get_tree().paused = false
+	if answer_index != correct_answer:
+		wrong_answers.questions[question.get_text()] = correct_text
+		print("wrong answer here")
+		print(wrong_answers.questions)
 	Events.mcq_answered.emit(answer_index == correct_answer)

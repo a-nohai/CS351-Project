@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_2wb5n")
-layer = "Physical"
+layer = "Tutorial"
 max_points = {
 "Application": 0,
 "Data Link": 0,

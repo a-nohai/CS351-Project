@@ -88,7 +88,7 @@ func _on_card_played(card: Card) -> void:
 		hand.add_card(card)
 		character.set_mana(character.mana+1)
 		character.set_block(character.block-1)
-		print("can only play one defence card")
+		#print("can only play one defence card")
 		Events.card_tooltip_requested.emit(null,"[center]You can only play one defence card![center]")
 		await get_tree().create_timer(1.0).timeout
 		Events.tooltip_hide_requested.emit()

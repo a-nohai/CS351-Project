@@ -10,3 +10,6 @@ func _ready() -> void:
 
 func show_question(text: String) -> void:
 	question_text_label.text = text
+
+func get_text() -> String:
+	return question_text_label.text

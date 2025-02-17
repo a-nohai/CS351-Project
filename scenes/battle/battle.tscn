@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dstw1ji17t5b"]
+[gd_scene load_steps=25 format=3 uid="uid://dstw1ji17t5b"]
 
 [ext_resource type="Script" path="res://scenes/battle/battle.gd" id="1_27m4w"]
 [ext_resource type="Texture2D" uid="uid://bvloob8nidl2k" path="res://cloud-storage-background-remixed-from-public-domain-by-nasa.jpg" id="1_kfa8l"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://mi8n13lpqgpn" path="res://scenes/ui/battle_info.tscn" id="18_6fsa7"]
 [ext_resource type="Script" path="res://scenes/battle/mcq_handler.gd" id="18_ynrqt"]
 [ext_resource type="PackedScene" uid="uid://c24xf71rs86v8" path="res://scenes/ui/mcq_panel.tscn" id="19_sk1vy"]
+[ext_resource type="Resource" uid="uid://c54gl4gewpfwq" path="res://scenes/ui/wrong_answers.tres" id="23_ebd2c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khkfc"]
 size = Vector2(1920, 795)
@@ -145,3 +146,4 @@ layer = 2
 
 [node name="MCQPanel" parent="MCQHandler/MCQLayer" instance=ExtResource("19_sk1vy")]
 visible = false
+wrong_answers = ExtResource("23_ebd2c")

@@ -15,7 +15,7 @@ func load_questions() -> void:
 		var result = json_parser.parse(file.get_as_text())
 		questions_data = json_parser.data
 		file.close()
-		print("Questions loaded successfully.")
+		#print("Questions loaded successfully.")
 	else:
 		print("Failed to load questions.json")
 

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="QuestionData" load_steps=2 format=3 uid="uid://c54gl4gewpfwq"]
+
+[ext_resource type="Script" path="res://custom_resources/question_data.gd" id="1_80kdv"]
+
+[resource]
+script = ExtResource("1_80kdv")
+questions = {}

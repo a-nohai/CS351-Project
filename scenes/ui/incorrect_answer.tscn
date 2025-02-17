@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://b2mit3o2pwd1b"]
+
+[ext_resource type="Script" path="res://scenes/ui/incorrect_answer.gd" id="1_ex5l2"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vj8v0"]
+font_size = 40
+
+[node name="IncorrectAnswer" type="HBoxContainer"]
+custom_minimum_size = Vector2(1500, 0)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 150
+script = ExtResource("1_ex5l2")
+
+[node name="Question" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+text = "What physical security measure helps prevent unauthorized access to server rooms?"
+label_settings = SubResource("LabelSettings_vj8v0")
+autowrap_mode = 3
+
+[node name="CorrectAnswer" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+text = "ANS2"
+label_settings = SubResource("LabelSettings_vj8v0")
+autowrap_mode = 2

@@ -85,16 +85,16 @@ func _on_mcq_result(correct_mcq: bool) -> void:
 	#player_handler.mcq_correct = correct_mcq
 	# Calculate the damage based on defense and MCQ correctness
 	var temp_damage = current_action.damage
-	print(player_handler.defence_type)
-	print(current_action.required_defence)
+	#print(player_handler.defence_type)
+	#print(current_action.required_defence)
 	if correct_mcq and player_handler.defence_type == current_action.required_defence:
 		current_action.damage = 0
-		print("Both correct! No damage taken.")
+		#print("Both correct! No damage taken.")
 	elif correct_mcq or player_handler.defence_type == current_action.required_defence:
 		current_action.damage = (0.5 * temp_damage) + 1
-		print("One correct! Reduced damage taken.")
+		#print("One correct! Reduced damage taken.")
 	else:
-		print("Both incorrect! Full damage taken.")
+		#print("Both incorrect! Full damage taken.")
 		current_action.damage = temp_damage + 1
 	# Perform the action
 	defence_ui.update_block_status(player_handler.defence_type == current_action.required_defence)

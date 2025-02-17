@@ -1,0 +1,347 @@
+[gd_scene load_steps=49 format=3 uid="uid://ccqtwksow0ahw"]
+
+[ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_vmvyr"]
+[ext_resource type="Script" path="res://enemies/transport/syn_flood.gd" id="2_6y1aq"]
+[ext_resource type="Texture2D" uid="uid://bmudpl1v1abps" path="res://kenney_roguelike-characters/Spritesheet/cable_guarding.png" id="3_05bs4"]
+[ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_g8s4l"]
+[ext_resource type="AudioStream" uid="uid://dspqcf81x3gsh" path="res://sounds/22_Slash_04.wav" id="5_2tjgy"]
+[ext_resource type="Script" path="res://enemies/transport/session_hijacking.gd" id="6_bqknw"]
+[ext_resource type="Texture2D" uid="uid://coasovla6i54r" path="res://kenney_roguelike-characters/Spritesheet/physical_security.png" id="7_svtco"]
+[ext_resource type="Script" path="res://enemies/transport/port_scanning.gd" id="8_wfyvw"]
+[ext_resource type="Texture2D" uid="uid://bnoe21latb3a8" path="res://kenney_roguelike-characters/Spritesheet/block.png" id="9_k8238"]
+[ext_resource type="Script" path="res://enemies/data/mac_flooding.gd" id="10_2bbjs"]
+[ext_resource type="Script" path="res://enemies/data/mac_spoofing.gd" id="11_4omk7"]
+[ext_resource type="Script" path="res://enemies/data/arp_poisoning.gd" id="12_g6pjo"]
+[ext_resource type="Script" path="res://enemies/application/sql_injection.gd" id="13_8w4s2"]
+[ext_resource type="Script" path="res://enemies/application/cross_site_scripting.gd" id="14_u8i37"]
+[ext_resource type="Script" path="res://enemies/application/phishing.gd" id="15_isfmo"]
+[ext_resource type="Script" path="res://enemies/network/ip_spoofing.gd" id="16_ng3t4"]
+[ext_resource type="Script" path="res://enemies/network/ddos.gd" id="17_vibi8"]
+[ext_resource type="Script" path="res://enemies/network/routing_table_poisoning.gd" id="18_rf5n4"]
+[ext_resource type="Script" path="res://enemies/physical/wiretapping.gd" id="19_0xb0g"]
+[ext_resource type="Script" path="res://enemies/physical/jamming.gd" id="20_jamd4"]
+[ext_resource type="Script" path="res://enemies/physical/cable_cut.gd" id="21_4hsau"]
+[ext_resource type="Script" path="res://enemies/presentation/data_tampering.gd" id="22_1crqu"]
+[ext_resource type="Script" path="res://enemies/presentation/man_in_the_middle.gd" id="23_tv46w"]
+[ext_resource type="Script" path="res://enemies/presentation/encoding_exploits.gd" id="24_nvhij"]
+[ext_resource type="Script" path="res://enemies/session/session_fixation.gd" id="25_1pf7n"]
+[ext_resource type="Script" path="res://enemies/session/rpc_exploits.gd" id="26_b4t7m"]
+[ext_resource type="Script" path="res://enemies/session/session_timeout_abuse.gd" id="27_thwjp"]
+
+[sub_resource type="Resource" id="Resource_yfafa"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("3_05bs4")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_fix54"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("7_svtco")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_gmkeg"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("9_k8238")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_jxd8v"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("3_05bs4")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_rcsgs"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("7_svtco")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_ituq2"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("9_k8238")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_8ryo8"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("7_svtco")
+tooltip_text = "[center][color=0044ff]SQL Injection[/color][/center]"
+
+[sub_resource type="Resource" id="Resource_5b0v7"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("9_k8238")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_ckvhn"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("3_05bs4")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_e76ep"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("7_svtco")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_4h78t"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("3_05bs4")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_j8rfp"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("9_k8238")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_2uvhy"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("7_svtco")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_2pl17"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("9_k8238")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_wnfvo"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("3_05bs4")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_tnqgq"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("3_05bs4")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_8iy21"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("7_svtco")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_npxy8"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("9_k8238")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_551p8"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("3_05bs4")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_boyht"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("7_svtco")
+tooltip_text = ""
+
+[sub_resource type="Resource" id="Resource_nwkrn"]
+script = ExtResource("4_g8s4l")
+number = "8"
+icon = ExtResource("9_k8238")
+tooltip_text = ""
+
+[node name="FinalEnemyAI" type="Node"]
+script = ExtResource("1_vmvyr")
+
+[node name="SYNFlood" type="Node" parent="."]
+script = ExtResource("2_6y1aq")
+damage = 8
+intent = SubResource("Resource_yfafa")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="SessionHijacking" type="Node" parent="."]
+script = ExtResource("6_bqknw")
+damage = 8
+intent = SubResource("Resource_fix54")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="PortScanning" type="Node" parent="."]
+script = ExtResource("8_wfyvw")
+damage = 8
+intent = SubResource("Resource_gmkeg")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="MACFlooding" type="Node" parent="."]
+script = ExtResource("10_2bbjs")
+damage = 8
+intent = SubResource("Resource_jxd8v")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="MACSpoofing" type="Node" parent="."]
+script = ExtResource("11_4omk7")
+damage = 8
+intent = SubResource("Resource_rcsgs")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="ARPPoisoning" type="Node" parent="."]
+script = ExtResource("12_g6pjo")
+damage = 8
+intent = SubResource("Resource_ituq2")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="SQLInjection" type="Node" parent="."]
+script = ExtResource("13_8w4s2")
+damage = 8
+intent = SubResource("Resource_8ryo8")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="CrossSiteScripting" type="Node" parent="."]
+script = ExtResource("14_u8i37")
+damage = 8
+intent = SubResource("Resource_5b0v7")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="Phishing" type="Node" parent="."]
+script = ExtResource("15_isfmo")
+damage = 8
+intent = SubResource("Resource_ckvhn")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="IPSpoofing" type="Node" parent="."]
+script = ExtResource("16_ng3t4")
+damage = 8
+intent = SubResource("Resource_e76ep")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="DDoS" type="Node" parent="."]
+script = ExtResource("17_vibi8")
+damage = 8
+intent = SubResource("Resource_4h78t")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="RoutingTablePoisoning" type="Node" parent="."]
+script = ExtResource("18_rf5n4")
+damage = 8
+intent = SubResource("Resource_j8rfp")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="Wiretapping" type="Node" parent="."]
+script = ExtResource("19_0xb0g")
+damage = 8
+intent = SubResource("Resource_2uvhy")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="Jamming" type="Node" parent="."]
+script = ExtResource("20_jamd4")
+damage = 8
+intent = SubResource("Resource_2pl17")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="CableCut" type="Node" parent="."]
+script = ExtResource("21_4hsau")
+damage = 8
+intent = SubResource("Resource_wnfvo")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="DataTampering" type="Node" parent="."]
+script = ExtResource("22_1crqu")
+damage = 8
+intent = SubResource("Resource_tnqgq")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="ManInTheMiddle" type="Node" parent="."]
+script = ExtResource("23_tv46w")
+damage = 8
+intent = SubResource("Resource_8iy21")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="EncodingExploits" type="Node" parent="."]
+script = ExtResource("24_nvhij")
+damage = 8
+intent = SubResource("Resource_npxy8")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="SessionFixation" type="Node" parent="."]
+script = ExtResource("25_1pf7n")
+damage = 8
+intent = SubResource("Resource_551p8")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="RPCExploits" type="Node" parent="."]
+script = ExtResource("26_b4t7m")
+damage = 8
+intent = SubResource("Resource_boyht")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0
+
+[node name="SessionTimeoutAbuse" type="Node" parent="."]
+script = ExtResource("27_thwjp")
+damage = 8
+intent = SubResource("Resource_nwkrn")
+sound = ExtResource("5_2tjgy")
+type = 1
+isAttack = true
+chance_weight = 1.0

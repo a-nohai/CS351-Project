@@ -1,5 +1,165 @@
 [
 	{
+		"layer": "Tutorial",
+		"questionset": [
+			{
+				"question": "What physical security measure helps prevent unauthorized access to server rooms?",
+				"answers": [
+					"Biometric authentication",
+					"Port mirroring",
+					"MAC filtering",
+					"Firewalls"
+				],
+				"correct_option": "Biometric authentication"
+			},
+		]
+	},
+		{
+		"layer": "Final",
+		"questionset": [
+			{
+				"question": "What physical security measure helps prevent unauthorized access to server rooms?",
+				"answers": [
+					"Biometric authentication",
+					"Port mirroring",
+					"MAC filtering",
+					"Firewalls"
+				],
+				"correct_option": "Biometric authentication"
+			},
+			{
+				"question": "What is an example of a physical layer attack?",
+				"answers": [
+					"Wiretapping",
+					"Session Hijacking",
+					"SQL Injection",
+					"DNS Spoofing"
+				],
+				"correct_option": "Wiretapping"
+			},
+			{
+				"question": "What protocol is used to detect and mitigate ARP spoofing?",
+				"answers": [
+					"Dynamic ARP Inspection (DAI)",
+					"DNSSEC",
+					"IPSec",
+					"SSL/TLS"
+				],
+				"correct_option": "Dynamic ARP Inspection (DAI)"
+			},
+						{
+				"question": "What is the primary purpose of VLANs at the data link layer?",
+				"answers": [
+					"Segmenting networks",
+					"Encrypting data",
+					"Improving data compression",
+					"Blocking IP addresses"
+				],
+				"correct_option": "Segmenting networks"
+			},
+						{
+				"question": "What attack manipulates IP packet fragmentation to evade security measures?",
+				"answers": [
+					"IP Fragmentation Attack",
+					"Man-in-the-Middle Attack",
+					"SQL Injection",
+					"MAC Spoofing"
+				],
+				"correct_option": "IP Fragmentation Attack"
+			},
+			{
+				"question": "Which device operates at the network layer?",
+				"answers": [
+					"Router",
+					"Switch",
+					"Hub",
+					"Repeater"
+				],
+				"correct_option": "Router"
+			},
+						{
+				"question": "Which feature of the session layer ensures multiple conversations between devices are kept separate?",
+				"answers": [
+					"Dialog control",
+					"Flow control",
+					"Error correction",
+					"Data encapsulation"
+				],
+				"correct_option": "Dialog control"
+			},
+			{
+				"question": "How does session layer authentication enhance security?",
+				"answers": [
+					"Verifies user identity before session establishment",
+					"Encrypts all data packets",
+					"Blocks phishing attacks",
+					"Manages IP addresses"
+				],
+				"correct_option": "Verifies user identity before session establishment"
+			},
+						{
+				"question": "Which session layer attack can hijack an active session?",
+				"answers": [
+					"Session hijacking",
+					"Phishing",
+					"ARP spoofing",
+					"MAC flooding"
+				],
+				"correct_option": "Session hijacking"
+			},
+			{
+				"question": "What protocol does the session layer use to maintain a secure connection?",
+				"answers": [
+					"SSL/TLS",
+					"UDP",
+					"HTTP",
+					"DHCP"
+				],
+				"correct_option": "SSL/TLS"
+			},
+						{
+				"question": "How does the presentation layer ensure data integrity?",
+				"answers": [
+					"By formatting and encrypting data",
+					"By managing network routing",
+					"By controlling session duration",
+					"By assigning logical addresses"
+				],
+				"correct_option": "By formatting and encrypting data"
+			},
+			{
+				"question": "What technique is used at the presentation layer to convert data into a readable format?",
+				"answers": [
+					"Data translation",
+					"Port forwarding",
+					"Address resolution",
+					"Packet switching"
+				],
+				"correct_option": "Data translation"
+			},
+						{
+				"question": "What protocol is used to send emails?",
+				"answers": [
+					"SMTP",
+					"FTP",
+					"ICMP",
+					"DHCP"
+				],
+				"correct_option": "SMTP"
+			},
+			{
+				"question": "Which protocol allows users to retrieve emails from a mail server?",
+				"answers": [
+					"IMAP",
+					"DNS",
+					"SNMP",
+					"SSL"
+				],
+				"correct_option": "IMAP"
+			}
+		]
+	},
+	{
 		"layer": "Physical",
 		"questionset": [
 			{

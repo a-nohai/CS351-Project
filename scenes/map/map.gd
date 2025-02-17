@@ -46,19 +46,21 @@ func enable_button(layer: int) -> void:
 			final_points.text = "UNLOCKED!"
 			final_button.disabled = false
 
+
 func set_layer_points(layer: String, new_points:int) -> void:
+	#print(new_points)
 	match layer:
 		"Physical":
 			layer_1_points.text = "%s/3 PTS" % [new_points]
 		"Data Link":
 			layer_2_points.text = "%s/3 PTS" % [new_points]
-		"Application":
-			layer_3_points.text = "%s/3 PTS" % [new_points]
 		"Network":
-			layer_4_points.text = "%s/3 PTS" % [new_points]
-		"Presentation":
-			layer_5_points.text = "%s/3 PTS" % [new_points]
-		"Session":
-			layer_6_points.text = "%s/3 PTS" % [new_points]
+			layer_3_points.text = "%s/3 PTS" % [new_points]
 		"Transport":
+			layer_4_points.text = "%s/3 PTS" % [new_points]
+		"Session":
+			layer_5_points.text = "%s/3 PTS" % [new_points]
+		"Presentation":
+			layer_6_points.text = "%s/3 PTS" % [new_points]
+		"Application":
 			layer_7_points.text = "%s/3 PTS" % [new_points]

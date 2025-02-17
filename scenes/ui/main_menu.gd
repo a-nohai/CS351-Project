@@ -9,10 +9,11 @@ const TUTORIAL_SCENE := preload("res://scenes/tutorial/tutorial.tscn")
 
 func _ready() -> void:
 	get_tree().paused = false
+	continue_button.disabled = SaveGame.load_data() == null
 
 func _on_continue_pressed() -> void:
-	print("continue run")
-
+	run_startup.type = RunStartup.Type.CONTINUED_RUN
+	get_tree().change_scene_to_packed(RUN_SCENE)
 
 func _on_new_game_pressed() -> void:
 	run_startup.type = RunStartup.Type.NEW_RUN

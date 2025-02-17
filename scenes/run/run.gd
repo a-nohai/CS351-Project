@@ -10,24 +10,33 @@ const NETWORK_DECK := preload("res://characters/warrior/warrior_network_deck.tre
 const PRESENTATION_DECK := preload("res://characters/warrior/warrior_presentation_deck.tres")
 const SESSION_DECK := preload("res://characters/warrior/warrior_session_deck.tres")
 const TRANSPORT_DECK := preload("res://characters/warrior/warrior_transport_deck.tres")
+const MAIN_MENU_PATH := "res://scenes/ui/main_menu.tscn"
 
 @export var run_startup: RunStartup
 @export var current_layer: CurrentLayer
 @export var points: int = 0
+@export var wrong_answers: QuestionData
 
 @onready var map: Control = $Map
 @onready var current_view: Node = $CurrentView
 @onready var battle_button: Button = $"%BattleButton"
 @onready var map_button: Button = $"%MapButton"
 @onready var points_ui: PointsUI = $PointsUI
+@onready var pause_menu: PauseMenu = $PauseMenu
+@onready var wrong_answers_panel: WrongAnswersPanel = $WrongAnswersPanel
 
 var prev_battle: BattleStats
 
 var character: CharacterStats
 
+var save_data: SaveGame
+
+
 func _ready() -> void:
 	if not run_startup:
 		return
+	
+	pause_menu.save_and_quit.connect(_save_and_quit)
 	
 	match run_startup.type:
 		RunStartup.Type.NEW_RUN:
@@ -35,11 +44,51 @@ func _ready() -> void:
 			character = warrior.create_instance()
 			_start_run()
 		RunStartup.Type.CONTINUED_RUN:
-			print("TODO: load previous run")
+			_load_run()
 
 func _start_run() -> void:
 	_setup_event_connections()
 	
+	save_data = SaveGame.new()
+	_save_run(true)
+
+func _save_and_quit() -> void:
+	_save_run(true)
+	get_tree().change_scene_to_file(MAIN_MENU_PATH)
+
+func _save_run(was_on_map: bool) -> void:
+	save_data.current_layer = current_layer.max_points
+	save_data.char_stats = character
+	save_data.current_deck = character.deck
+	save_data.current_health = character.health
+	save_data.was_on_map = was_on_map
+	print("save")
+	print(points)
+	print(current_layer.max_points)
+	save_data.points = points
+	save_data.save_data()
+
+func _load_run() -> void:
+	save_data = SaveGame.load_data()
+	assert(save_data, "Couldn't load last save")
+	
+	current_layer.max_points = save_data.current_layer
+	character = save_data.char_stats
+	character.deck = save_data.current_deck
+	character.health = save_data.current_health
+	points = save_data.points
+	print("load")
+	print(points)
+	print(current_layer.max_points)
+	_setup_event_connections()
+	
+	Events.points_changed.emit(points)
+	
+	for layer in current_layer.max_points:
+		if current_layer.max_points[layer] != 0:
+			map.set_layer_points(layer, current_layer.max_points[layer])
+	
+
 func _change_view(scene: PackedScene) -> Node:
 	if current_view.get_child_count() > 0:
 		current_view.get_child(0).queue_free()
@@ -63,6 +112,7 @@ func _setup_event_connections() -> void:
 	Events.battle_lost.connect(_on_battle_lost)
 	Events.map_exited.connect(_on_map_exited)
 	Events.points_changed.connect(_on_points_changed)
+	Events.briefing_read.connect(_on_briefing_read)
 	
 	battle_button.pressed.connect(_change_view.bind(BATTLE_SCENE))
 	map_button.pressed.connect(_show_map)
@@ -91,6 +141,10 @@ func _on_battle_room_entered() -> void:
 		"Transport":
 			character.deck = TRANSPORT_DECK
 			battle_scene.battle_stats = preload("res://battles/transport/transport1.tres")
+		"Final":
+			character.deck = TRANSPORT_DECK
+			battle_scene.battle_stats = preload("res://battles/final/final.tres")
+	character.set_health(character.max_health)
 	battle_scene.battle_info.set_layer(current_layer.layer)
 	battle_scene.char_stats = character
 	prev_battle = battle_scene.battle_stats
@@ -129,6 +183,7 @@ func _on_battle_win() -> void:
 				character.deck = TRANSPORT_DECK
 		new_battle_scene.battle_stats = load(new_path)
 		new_battle_scene.char_stats = character
+		new_battle_scene.battle_info.set_layer(current_layer.layer)
 		prev_battle = new_battle_scene.battle_stats
 		new_battle_scene.start_battle()
 	else:
@@ -151,8 +206,15 @@ func _on_battle_win() -> void:
 func _on_battle_lost() -> void:
 	get_tree().paused = false
 	print("battle lost")
+	wrong_answers_panel.visible = true
+	wrong_answers_panel.populate_scrollable(wrong_answers.questions)
 	character.set_health(character.max_health)
 	_show_map()
+
+func _on_briefing_read() -> void:
+	wrong_answers_panel.visible = false
+	wrong_answers_panel.depopulate_scrollable()
+	wrong_answers.questions = {}
 
 func _on_points_changed(added_points: int) -> void:
 	points_ui.set_points(added_points)
@@ -160,13 +222,31 @@ func _on_points_changed(added_points: int) -> void:
 		4,5,6:
 			map.enable_button(3)
 		7,8,9:
+			map.enable_button(3)
 			map.enable_button(4)
 		10,11,12:
+			map.enable_button(3)
+			map.enable_button(4)
 			map.enable_button(5)
 		13,14,15,16,17:
+			map.enable_button(3)
+			map.enable_button(4)
+			map.enable_button(5)
 			map.enable_button(6)
 		18,19,20:
+			map.enable_button(3)
+			map.enable_button(4)
+			map.enable_button(5)
+			map.enable_button(6)
 			map.enable_button(7)
 		21:
+			map.enable_button(3)
+			map.enable_button(4)
+			map.enable_button(5)
+			map.enable_button(6)
+			map.enable_button(7)
 			map.enable_button(8)
-	
+		
+	for layer in current_layer.max_points:
+		if current_layer.max_points[layer] != 0:
+			map.set_layer_points(layer, current_layer.max_points[layer])

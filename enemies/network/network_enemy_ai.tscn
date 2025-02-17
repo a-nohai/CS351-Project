@@ -19,26 +19,31 @@
 script = ExtResource("4_kjaui")
 number = "8"
 icon = ExtResource("3_x82vo")
+tooltip_text = ""
 
 [sub_resource type="Resource" id="Resource_jcekd"]
 script = ExtResource("4_kjaui")
 number = "8"
 icon = ExtResource("7_gpxh7")
+tooltip_text = ""
 
 [sub_resource type="Resource" id="Resource_vp12m"]
 script = ExtResource("4_kjaui")
 number = "8"
 icon = ExtResource("9_ssyca")
+tooltip_text = ""
 
 [sub_resource type="Resource" id="Resource_1ig3a"]
 script = ExtResource("4_kjaui")
 number = "6"
 icon = ExtResource("9_ssyca")
+tooltip_text = ""
 
 [sub_resource type="Resource" id="Resource_rqp7l"]
 script = ExtResource("4_kjaui")
 number = "15"
 icon = ExtResource("13_66v8y")
+tooltip_text = ""
 
 [node name="NetworkEnemyAI" type="Node"]
 script = ExtResource("1_senws")
@@ -50,7 +55,7 @@ intent = SubResource("Resource_yhx5h")
 sound = ExtResource("5_46g71")
 type = 1
 isAttack = true
-chance_weight = 10.0
+chance_weight = 1.0
 
 [node name="DDoS" type="Node" parent="."]
 script = ExtResource("3_1p4ao")

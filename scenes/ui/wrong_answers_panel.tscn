@@ -1,0 +1,84 @@
+[gd_scene load_steps=5 format=3 uid="uid://cdwxqxd1jv3j4"]
+
+[ext_resource type="Script" path="res://scenes/ui/wrong_answers_panel.gd" id="1_p1uca"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wenlf"]
+bg_color = Color(0, 0, 0, 0.192157)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0ao5l"]
+font_size = 125
+
+[sub_resource type="LabelSettings" id="LabelSettings_kxf0r"]
+font_size = 32
+
+[node name="WrongAnswersPanel" type="Panel"]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wenlf")
+script = ExtResource("1_p1uca")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.475564, 0.319119, 0.919826, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -787.0
+offset_top = 83.0
+offset_right = 787.0
+offset_bottom = 973.0
+grow_horizontal = 2
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Defeat!"
+label_settings = SubResource("LabelSettings_0ao5l")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 700
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Question/Attack"
+label_settings = SubResource("LabelSettings_kxf0r")
+
+[node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Correct Answer"
+label_settings = SubResource("LabelSettings_kxf0r")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+custom_minimum_size = Vector2(1500, 500)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 40
+
+[node name="RestartButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 34
+text = "Restart"

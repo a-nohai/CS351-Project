@@ -1,15 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://dt0ld4qdjq8qk"]
+[gd_scene load_steps=10 format=3 uid="uid://dt0ld4qdjq8qk"]
 
 [ext_resource type="Script" path="res://scenes/run/run.gd" id="1_ig1d8"]
 [ext_resource type="Resource" uid="uid://su3qn31cihea" path="res://scenes/run/run_startup.tres" id="2_23ygx"]
 [ext_resource type="PackedScene" uid="uid://d1e2t6jtqxlan" path="res://scenes/map/map.tscn" id="2_qh3lo"]
 [ext_resource type="Resource" uid="uid://cat3ax5exrduk" path="res://scenes/run/current_layer.tres" id="3_0kf6c"]
+[ext_resource type="Resource" uid="uid://c54gl4gewpfwq" path="res://scenes/ui/wrong_answers.tres" id="4_1nxgh"]
 [ext_resource type="PackedScene" uid="uid://biuo632rooay5" path="res://scenes/ui/points_ui.tscn" id="5_60r6o"]
+[ext_resource type="Script" path="res://scenes/run/pause_menu.gd" id="6_fnsch"]
+[ext_resource type="PackedScene" uid="uid://cdwxqxd1jv3j4" path="res://scenes/ui/wrong_answers_panel.tscn" id="8_pi2v5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8ti4k"]
+font_size = 84
 
 [node name="Run" type="Node"]
 script = ExtResource("1_ig1d8")
 run_startup = ExtResource("2_23ygx")
 current_layer = ExtResource("3_0kf6c")
+wrong_answers = ExtResource("4_1nxgh")
 
 [node name="Map" parent="." instance=ExtResource("2_qh3lo")]
 
@@ -34,3 +41,61 @@ layout_mode = 2
 text = "Battle"
 
 [node name="PointsUI" parent="." instance=ExtResource("5_60r6o")]
+
+[node name="PauseMenu" type="CanvasLayer" parent="."]
+process_mode = 3
+layer = 5
+visible = false
+script = ExtResource("6_fnsch")
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.498362, 0.401695, 0.987803, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -25.5
+offset_right = 60.0
+offset_bottom = 25.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Label" type="Label" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = " Paused"
+label_settings = SubResource("LabelSettings_8ti4k")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PauseMenu/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 45
+alignment = 1
+
+[node name="BackToGameButton" type="Button" parent="PauseMenu/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+text = "Back"
+
+[node name="SaveAndQuitButton" type="Button" parent="PauseMenu/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 75)
+layout_mode = 2
+text = "Save & Quit"
+
+[node name="WrongAnswersPanel" parent="." instance=ExtResource("8_pi2v5")]
+visible = false
