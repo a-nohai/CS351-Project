@@ -64,7 +64,7 @@ func _setup_event_connections() -> void:
 func _on_battle_room_entered() -> void:
 	var battle_scene: TutorialBattle = await _change_view(TUTORIAL_SCENE) as TutorialBattle
 	character.deck = TUTORIAL_DECK
-	battle_scene.battle_stats = preload("res://battles/physical/physical1.tres")
+	battle_scene.battle_stats = preload("res://battles/tutorial/tutorial.tres")
 	battle_scene.battle_info.set_layer(current_layer.layer)
 	battle_scene.char_stats = character
 	prev_battle = battle_scene.battle_stats

@@ -1,12 +1,10 @@
-[gd_resource type="Resource" script_class="CardPile" load_steps=7 format=3 uid="uid://dnlytt85ese3v"]
+[gd_resource type="Resource" script_class="CardPile" load_steps=5 format=3 uid="uid://dnlytt85ese3v"]
 
 [ext_resource type="Script" path="res://custom_resources/card.gd" id="1_np40c"]
 [ext_resource type="Resource" uid="uid://b3prykff2vpen" path="res://characters/warrior/cards/warrior_axe_attack.tres" id="2_b0f6a"]
-[ext_resource type="Resource" uid="uid://ci8yy6fnl2mu1" path="res://characters/warrior/cards/physical/cable_guarding.tres" id="3_lkk2y"]
 [ext_resource type="Resource" uid="uid://vbihfg8wovux" path="res://characters/warrior/cards/physical/physical_security.tres" id="4_apom5"]
-[ext_resource type="Resource" uid="uid://cy2wnsk0mbchv" path="res://characters/warrior/cards/physical/shielding.tres" id="5_14qwb"]
 [ext_resource type="Script" path="res://custom_resources/card_pile.gd" id="6_43ksk"]
 
 [resource]
 script = ExtResource("6_43ksk")
-cards = Array[ExtResource("1_np40c")]([ExtResource("2_b0f6a"), ExtResource("3_lkk2y"), ExtResource("4_apom5"), ExtResource("5_14qwb")])
+cards = Array[ExtResource("1_np40c")]([ExtResource("2_b0f6a"), ExtResource("4_apom5"), ExtResource("4_apom5"), ExtResource("4_apom5")])

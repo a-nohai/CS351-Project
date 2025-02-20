@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cq7j32j54oy68"]
+[gd_scene load_steps=35 format=3 uid="uid://cq7j32j54oy68"]
 
 [ext_resource type="Script" path="res://scenes/tutorial/tutorial_battle.gd" id="1_mmevv"]
 [ext_resource type="Texture2D" uid="uid://bvloob8nidl2k" path="res://cloud-storage-background-remixed-from-public-domain-by-nasa.jpg" id="2_wg2l1"]
@@ -17,14 +17,277 @@
 [ext_resource type="PackedScene" uid="uid://dglxmf4ojdmbp" path="res://scenes/ui/tooltip.tscn" id="13_fummi"]
 [ext_resource type="Theme" uid="uid://dnn4o0eoeoh7f" path="res://main_theme2.tres" id="14_83yt3"]
 [ext_resource type="PackedScene" uid="uid://b1vq2pef4a483" path="res://scenes/ui/defence_ui.tscn" id="15_gesed"]
+[ext_resource type="PackedScene" uid="uid://bdw8q288jsoj0" path="res://scenes/ui/tutorial_tooltip.tscn" id="16_fuq8n"]
 [ext_resource type="PackedScene" uid="uid://mi8n13lpqgpn" path="res://scenes/ui/battle_info.tscn" id="16_ovopu"]
 [ext_resource type="Script" path="res://scenes/ui/red_flash.gd" id="17_wsqkm"]
 [ext_resource type="PackedScene" uid="uid://ckmhdt3q35aa8" path="res://scenes/ui/battle_over_panel.tscn" id="18_xg2k1"]
 [ext_resource type="Script" path="res://scenes/battle/mcq_handler.gd" id="19_ftypc"]
 [ext_resource type="PackedScene" uid="uid://c24xf71rs86v8" path="res://scenes/ui/mcq_panel.tscn" id="20_grr13"]
+[ext_resource type="Texture2D" uid="uid://c2ylmut3aur2x" path="res://cursor.png" id="23_2ih6y"]
+[ext_resource type="Resource" uid="uid://c54gl4gewpfwq" path="res://scenes/ui/wrong_answers.tres" id="24_4m4to"]
+[ext_resource type="Texture2D" uid="uid://dkioldswuhpa1" path="res://kenney_roguelike-characters/Spritesheet/fireball.png" id="24_gld3x"]
+[ext_resource type="Texture2D" uid="uid://coasovla6i54r" path="res://kenney_roguelike-characters/Spritesheet/physical_security.png" id="25_vdn1m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khkfc"]
 size = Vector2(1920, 795)
+
+[sub_resource type="Animation" id="Animation_2wpox"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TutorialHighlights/Arrow:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(392, 344)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TutorialHighlights/Arrow:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TutorialHighlights/Arrow:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.07533]
+}
+
+[sub_resource type="Animation" id="Animation_f6nb5"]
+resource_name = "step0"
+length = 42.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TutorialHighlights/Arrow:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(4.47667, 4.77667, 5, 5.02, 5.3, 5.53333, 5.54333, 5.81333, 6.05667, 6.06667, 6.34667, 6.59, 6.66667, 6.94667, 7.19, 7.46667, 7.71, 7.78667, 8.06667, 8.31, 8.73333, 8.93333, 9.2, 9.23333, 9.43333, 9.7, 9.76667, 9.96667, 10.2333, 10.2667, 10.4667, 10.7333, 10.7667, 10.9667, 11.2333, 11.4333, 11.4667, 11.6667, 11.9333, 11.9667, 12.1667, 12.4333, 13.0333, 13.7999, 14.1333, 14.4333, 14.7666, 15.0333, 15.3666, 15.6666, 15.9999, 16.2999, 16.6333, 16.9333, 17.2666, 17.5667, 17.8667, 18.2, 18.9666, 19.1666, 19.3333, 19.5999, 19.7666, 20.0333, 20.1999, 20.4333, 20.5999, 20.8666, 21.0333, 21.2999, 21.4666, 21.7, 21.8667, 22.1, 22.2667, 22.9667, 23.1333, 23.3333, 23.5, 23.6667, 23.8667, 24.0333, 24.2667, 24.4333, 24.7, 24.8667, 25.1, 25.2667, 25.5333, 25.7, 25.9333, 26.1, 26.4, 26.5667, 26.8, 26.9667, 27.5001, 27.9667, 28.1667, 28.4001, 28.6001, 28.8667, 29.0667, 29.3001, 29.5001, 29.7334, 29.9334, 30.1667, 30.3667, 30.6333, 30.8333, 31.0667, 31.2667, 31.4667, 31.6667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(392, 344), Vector2(389, 309), Vector2(392, 344), Vector2(385, 349), Vector2(389, 309), Vector2(385, 349), Vector2(385, 349), Vector2(389, 309), Vector2(385, 349), Vector2(385, 349), Vector2(389, 309), Vector2(385, 349), Vector2(385, 349), Vector2(389, 309), Vector2(385, 349), Vector2(389, 309), Vector2(385, 349), Vector2(385, 349), Vector2(389, 309), Vector2(385, 349), Vector2(1553, 276), Vector2(1549, 239), Vector2(1550, 292), Vector2(1553, 276), Vector2(1549, 239), Vector2(1550, 292), Vector2(1553, 276), Vector2(1549, 239), Vector2(1550, 292), Vector2(1553, 276), Vector2(1549, 239), Vector2(1550, 292), Vector2(1553, 276), Vector2(1549, 239), Vector2(1550, 292), Vector2(1550, 292), Vector2(1553, 276), Vector2(1549, 239), Vector2(1550, 292), Vector2(1553, 276), Vector2(1549, 239), Vector2(1550, 292), Vector2(948, 796), Vector2(950, 739), Vector2(952, 784), Vector2(950, 739), Vector2(952, 784), Vector2(950, 739), Vector2(952, 784), Vector2(950, 739), Vector2(952, 784), Vector2(950, 739), Vector2(952, 784), Vector2(950, 739), Vector2(952, 784), Vector2(952, 784), Vector2(950, 739), Vector2(952, 784), Vector2(136, 768), Vector2(138, 796), Vector2(134, 760), Vector2(138, 796), Vector2(134, 760), Vector2(138, 796), Vector2(134, 760), Vector2(138, 796), Vector2(134, 760), Vector2(138, 796), Vector2(134, 760), Vector2(138, 796), Vector2(134, 760), Vector2(138, 796), Vector2(134, 760), Vector2(138, 796), Vector2(134, 760), Vector2(138, 796), Vector2(134, 760), Vector2(1722, 867), Vector2(1719, 829), Vector2(1726, 863), Vector2(1719, 829), Vector2(1726, 863), Vector2(1719, 829), Vector2(1726, 863), Vector2(1719, 829), Vector2(1726, 863), Vector2(1719, 829), Vector2(1726, 863), Vector2(1719, 829), Vector2(1726, 863), Vector2(1719, 829), Vector2(1726, 863), Vector2(1719, 829), Vector2(1726, 863), Vector2(1719, 829), Vector2(1726, 863), Vector2(1705, 401), Vector2(1727, 399), Vector2(1703, 400), Vector2(1727, 399), Vector2(1703, 400), Vector2(1727, 399), Vector2(1703, 400), Vector2(1727, 399), Vector2(1703, 400), Vector2(1727, 399), Vector2(1703, 400), Vector2(1727, 399), Vector2(1703, 400), Vector2(1727, 399), Vector2(1703, 400), Vector2(1727, 399), Vector2(1703, 400), Vector2(1727, 399), Vector2(1703, 400)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TutorialHighlights/Arrow:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0333333, 4.43333, 8.26667, 8.93333, 12.2, 13.4666, 17.9667, 19.1333, 22.5333, 23.4667, 26.8333, 27.8001, 31.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TutorialHighlights/Arrow:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 27.5001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [-2.71454, -1.07533]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BattleUI/TutorialTooltip")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.03333, 4.43333, 12.6, 13.0666, 18.5667, 19.0562, 23.0896, 23.3229, 27.2896, 27.5229, 31.9562, 32.3, 36.4333, 36.7, 42),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [null, "[center]Welcome to the tutorial![center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [null, "[center]Your character is positioned on the left, whereas the enemy is on the right[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [null, "[center]Cards are located at the bottom of the screen[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [null, "[center]This counter shows how many cards can be played in a turn[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [null, "[center]This button ends your current turn[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [null, "[center]The icon above the enemy’s head shows what attack they intend to perform[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [ExtResource("24_gld3x"), "[center]Try playing the attack card with this icon[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [ExtResource("24_gld3x"), "[center]Select it from your hand, click and drag over the enemy, and release to play[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_wg6ny"]
+resource_name = "step0_2"
+length = 13.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BattleUI/TutorialTooltip")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4.23333, 4.46667, 8.13333, 8.43333, 13),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [null, "[center]Well done! You have successfully damaged the enemy![center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [ExtResource("25_vdn1m"), "[center]Now, play the defence card with this icon to set up your defence[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [ExtResource("25_vdn1m"), "[center]Select it from your hand, click and drag over the player, and release to play[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_vheob"]
+resource_name = "step1_2"
+length = 15.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BattleUI/TutorialTooltip")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.01, 4.81, 5.11, 10.34, 10.65, 14.99),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [null, "[center]You have just answered your first question! You have received damage according to your answer[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [ExtResource("24_gld3x"), "[center]The enemy is one hit away from being defeated, select the attack card to finish it off[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [null, "[center]After this, you will be on your own. Good Luck![center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_c2vj7"]
+resource_name = "step1"
+length = 22.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BattleUI/TutorialTooltip")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.01, 3.99, 4.3, 8.02, 8.33, 13, 13.2693, 18.0193, 18.2407, 21.9907),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [null, "[center]You have now begun setting up your defence against the enemy[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [null, "[center]Once you end the turn, you will be asked a multiple-choice question[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [null, "[center]Choosing both the correct defence card and answer will protect from all damage[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [null, "[center]Getting one wrong will deal reduced damage, and both wrong is full damage![center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [null, "[center]As you have no other cards you can play this turn, press ‘End Turn’[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_72grj"]
+_data = {
+"RESET": SubResource("Animation_2wpox"),
+"step0": SubResource("Animation_f6nb5"),
+"step0_2": SubResource("Animation_wg6ny"),
+"step1": SubResource("Animation_c2vj7"),
+"step1_2": SubResource("Animation_vheob")
+}
 
 [node name="TutorialBattle" type="Node2D"]
 script = ExtResource("1_mmevv")
@@ -64,6 +327,7 @@ stats = ExtResource("7_le2h2")
 [node name="PlayerHandler" type="Node" parent="." node_paths=PackedStringArray("hand")]
 script = ExtResource("9_r1ry3")
 hand = NodePath("../BattleUI/Hand")
+is_tutorial = true
 
 [node name="BattleUI" type="CanvasLayer" parent="." groups=["ui_layer"]]
 script = ExtResource("10_f7380")
@@ -88,6 +352,11 @@ char_stats = ExtResource("7_le2h2")
 [node name="Tooltip" parent="BattleUI" instance=ExtResource("13_fummi")]
 offset_top = 18.0
 offset_bottom = 258.0
+
+[node name="TutorialTooltip" parent="BattleUI" instance=ExtResource("16_fuq8n")]
+process_mode = 3
+offset_top = 21.0
+offset_bottom = 261.0
 
 [node name="EndTurnButton" type="Button" parent="BattleUI"]
 unique_name_in_owner = true
@@ -145,3 +414,19 @@ layer = 2
 
 [node name="MCQPanel" parent="MCQHandler/MCQLayer" instance=ExtResource("20_grr13")]
 visible = false
+wrong_answers = ExtResource("24_4m4to")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+process_mode = 3
+libraries = {
+"": SubResource("AnimationLibrary_72grj")
+}
+
+[node name="TutorialHighlights" type="CanvasLayer" parent="."]
+layer = 6
+
+[node name="Arrow" type="Sprite2D" parent="TutorialHighlights"]
+position = Vector2(392, 344)
+rotation = -1.07533
+scale = Vector2(4.43601, 4.36364)
+texture = ExtResource("23_2ih6y")

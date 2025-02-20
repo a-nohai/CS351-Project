@@ -24,6 +24,7 @@ func _ready() -> void:
 	Events.player_turn_ended.connect(player_handler.end_turn)
 	Events.player_hand_discarded.connect(enemy_handler.start_turn)
 	Events.player_died.connect(_on_player_died)
+	$TutorialHighlights/Arrow.visible = false
 
 
 func _on_mcq_answered(correct: bool) -> void:

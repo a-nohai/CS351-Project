@@ -8,12 +8,16 @@ enum Type{ATTACK, DEFEND, POWER}
 
 @onready var defence_ui = $"../BattleUI/DefenceUI"
 @onready var battle_info = $"../BattleUI/BattleInfo"
+@onready var anim_player = $"../AnimationPlayer"
 
 @export var hand: Hand
 
 var character: CharacterStats
 @export var played_defence = false
 @export var defence_type = null
+
+@export var is_tutorial: bool
+var tutorial_step = 0
 
 func _ready() -> void:
 	Events.card_played.connect(_on_card_played)
@@ -35,6 +39,19 @@ func start_turn() -> void:
 	draw_cards(character.cards_per_turn)
 	await get_tree().create_timer(1.0).timeout
 	defence_ui.reset_ui()
+	if is_tutorial:
+		match tutorial_step:
+			0:
+				anim_player.play("step0")
+				get_tree().paused = true
+				await  anim_player.animation_finished
+				get_tree().paused = false
+			1:
+				anim_player.play("step1_2")
+				get_tree().paused = true
+				await  anim_player.animation_finished
+				get_tree().paused = false
+				tutorial_step +=1
 
 
 func end_turn() -> void:
@@ -84,6 +101,46 @@ func reshuffle_deck_from_discard() -> void:
 
 
 func _on_card_played(card: Card) -> void:
+	if is_tutorial:
+		match tutorial_step:
+			0:
+				if card.type != Type.ATTACK:
+					hand.add_card(card)
+					character.set_mana(character.mana+1)
+					Events.card_tooltip_requested.emit(null,"[center]That is not the attack card, try again![center]")
+					await get_tree().create_timer(1.0).timeout
+					Events.tooltip_hide_requested.emit()
+					character.set_block(0)
+					return
+				else:
+					anim_player.play("step0_2")
+					get_tree().paused = true
+					await  anim_player.animation_finished
+					get_tree().paused = false
+					tutorial_step += 1
+			1:
+				if card.type != Type.DEFEND:
+					hand.add_card(card)
+					character.set_mana(character.mana+1)
+					Events.card_tooltip_requested.emit(null,"[center]That is not the defence card, try again![center]")
+					await get_tree().create_timer(1.0).timeout
+					Events.tooltip_hide_requested.emit()
+					return
+				else:
+					if not played_defence:
+						anim_player.play("step1")
+						get_tree().paused = true
+						await  anim_player.animation_finished
+						get_tree().paused = false
+			2:
+				if card.type != Type.ATTACK:
+					hand.add_card(card)
+					character.set_mana(character.mana+1)
+					Events.card_tooltip_requested.emit(null,"[center]That is not the attack card, try again![center]")
+					await get_tree().create_timer(1.0).timeout
+					Events.tooltip_hide_requested.emit()
+					character.set_block(0)
+					return
 	if played_defence and card.type == Type.DEFEND:
 		hand.add_card(card)
 		character.set_mana(character.mana+1)

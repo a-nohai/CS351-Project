@@ -1,0 +1,25 @@
+[gd_scene load_steps=7 format=3 uid="uid://bmy280alng1hn"]
+
+[ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_5i4q6"]
+[ext_resource type="Script" path="res://enemies/physical/wiretapping.gd" id="2_wa1aj"]
+[ext_resource type="Texture2D" uid="uid://coasovla6i54r" path="res://kenney_roguelike-characters/Spritesheet/physical_security.png" id="3_c36gh"]
+[ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_41d0u"]
+[ext_resource type="AudioStream" uid="uid://dspqcf81x3gsh" path="res://sounds/22_Slash_04.wav" id="5_x72ud"]
+
+[sub_resource type="Resource" id="Resource_n6ei7"]
+script = ExtResource("4_41d0u")
+number = "8"
+icon = ExtResource("3_c36gh")
+tooltip_text = ""
+
+[node name="TutorialEnemyAI" type="Node"]
+script = ExtResource("1_5i4q6")
+
+[node name="Wiretapping" type="Node" parent="."]
+script = ExtResource("2_wa1aj")
+damage = 8
+intent = SubResource("Resource_n6ei7")
+sound = ExtResource("5_x72ud")
+type = 1
+isAttack = true
+chance_weight = 1.0
