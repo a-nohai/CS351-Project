@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://crl474q6a3d7a"]
 
-[ext_resource type="Texture2D" uid="uid://bmudpl1v1abps" path="res://kenney_roguelike-characters/Spritesheet/cable_guarding.png" id="1_h34nr"]
+[ext_resource type="Texture2D" uid="uid://xrctt5itda1j" path="res://textures/icons/defences/dataencryption.png" id="1_7srsg"]
 [ext_resource type="Script" path="res://characters/warrior/cards/physical/cable_guarding.gd" id="2_3ht8a"]
 [ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="3_0ascm"]
 
@@ -10,6 +10,6 @@ id = "data_encryption"
 type = 1
 target = 0
 cost = 1
-icon = ExtResource("1_h34nr")
+icon = ExtResource("1_7srsg")
 tooltip_text = "[center][color=\"0044ff\"]Data Encryption[/color].[/center]"
 sound = ExtResource("3_0ascm")

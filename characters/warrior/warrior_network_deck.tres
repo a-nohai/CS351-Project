@@ -9,4 +9,4 @@
 
 [resource]
 script = ExtResource("6_18c0b")
-cards = Array[ExtResource("1_4ienn")]([ExtResource("2_m4kcq"), ExtResource("2_m4kcq"), ExtResource("2_m4kcq"), ExtResource("2_m4kcq"), ExtResource("2_m4kcq"), ExtResource("3_viknm"), ExtResource("4_iie8y"), ExtResource("5_o85ll"), ExtResource("5_o85ll"), ExtResource("4_iie8y")])
+cards = Array[ExtResource("1_4ienn")]([ExtResource("2_m4kcq"), ExtResource("2_m4kcq"), ExtResource("3_viknm"), ExtResource("4_iie8y"), ExtResource("5_o85ll"), ExtResource("5_o85ll"), ExtResource("4_iie8y"), ExtResource("3_viknm")])

@@ -13,8 +13,6 @@ const TUTORIAL_DECK := preload("res://characters/warrior/warrior_tutorial_deck.t
 
 @onready var map: Control = $TutorialMap
 @onready var current_view: Node = $CurrentView
-@onready var battle_button: Button = $"%BattleButton"
-@onready var map_button: Button = $"%MapButton"
 @onready var points_ui: PointsUI = $PointsUI
 
 var prev_battle: BattleStats
@@ -57,9 +55,6 @@ func _setup_event_connections() -> void:
 	Events.battle_won.connect(_on_battle_win)
 	Events.battle_lost.connect(_on_battle_lost)
 	Events.tutorial_map_exited.connect(_on_map_exited)
-	
-	battle_button.pressed.connect(_change_view.bind(TUTORIAL_SCENE))
-	map_button.pressed.connect(_show_map)
 
 func _on_battle_room_entered() -> void:
 	var battle_scene: TutorialBattle = await _change_view(TUTORIAL_SCENE) as TutorialBattle

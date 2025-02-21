@@ -1,7 +1,7 @@
 class_name Enemy
 extends Area2D
 
-const ARROW_OFFSET := 175
+const ARROW_OFFSET := 200
 const WHITE_SPRITE_MATERIAL := preload("res://kenney_roguelike-characters/Spritesheet/white_sprite_material.tres")
 
 @export var stats: EnemyStats : set = set_enemy_stats

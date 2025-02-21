@@ -56,7 +56,7 @@ theme_override_constants/separation = 700
 
 [node name="Label" type="Label" parent="VBoxContainer/HBoxContainer"]
 layout_mode = 2
-text = "Question/Attack"
+text = "Question"
 label_settings = SubResource("LabelSettings_kxf0r")
 
 [node name="Label2" type="Label" parent="VBoxContainer/HBoxContainer"]

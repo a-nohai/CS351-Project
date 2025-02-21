@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://brvkwkk7cy0be"]
+
+[ext_resource type="Texture2D" uid="uid://cby1hrg1k8q0l" path="res://textures/icons/application.png" id="1_wdde2"]
+[ext_resource type="Script" path="res://characters/warrior/cards/final/application.gd" id="2_tu4v8"]
+
+[resource]
+script = ExtResource("2_tu4v8")
+id = "application"
+type = 1
+target = 0
+cost = 1
+icon = ExtResource("1_wdde2")
+tooltip_text = "[center][color=\"0044ff\"]Application[/color].[/center]"

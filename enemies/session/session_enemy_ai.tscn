@@ -1,43 +1,32 @@
-[gd_scene load_steps=19 format=3 uid="uid://butsjaru1udf5"]
+[gd_scene load_steps=13 format=3 uid="uid://butsjaru1udf5"]
 
 [ext_resource type="Script" path="res://scenes/enemy/enemy_action_picker.gd" id="1_k1iv5"]
 [ext_resource type="Script" path="res://enemies/session/session_fixation.gd" id="2_lvjcv"]
+[ext_resource type="Texture2D" uid="uid://cq6drparksppt" path="res://textures/icons/attacks/sessionfixation.png" id="3_60gby"]
 [ext_resource type="Script" path="res://enemies/session/rpc_exploits.gd" id="3_tlltn"]
-[ext_resource type="Texture2D" uid="uid://bmudpl1v1abps" path="res://kenney_roguelike-characters/Spritesheet/cable_guarding.png" id="3_u56pn"]
 [ext_resource type="Script" path="res://custom_resources/intent.gd" id="4_j810w"]
 [ext_resource type="Script" path="res://enemies/session/session_timeout_abuse.gd" id="4_p6v11"]
-[ext_resource type="Script" path="res://enemies/session/virus_block_action.gd" id="5_joold"]
-[ext_resource type="Script" path="res://enemies/session/virus_mega_block_action.gd" id="6_gpmq5"]
-[ext_resource type="Texture2D" uid="uid://coasovla6i54r" path="res://kenney_roguelike-characters/Spritesheet/physical_security.png" id="7_yqgjb"]
-[ext_resource type="Texture2D" uid="uid://bnoe21latb3a8" path="res://kenney_roguelike-characters/Spritesheet/block.png" id="9_ndddc"]
+[ext_resource type="Texture2D" uid="uid://c0vn78r4euval" path="res://textures/icons/attacks/rpcexploits.png" id="7_m1q6w"]
+[ext_resource type="Texture2D" uid="uid://duaojwvfcg8ea" path="res://textures/icons/attacks/sessiontimeoutabuse.png" id="9_en80u"]
 [ext_resource type="AudioStream" uid="uid://dspqcf81x3gsh" path="res://sounds/22_Slash_04.wav" id="10_7nk8c"]
-[ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="12_gndpo"]
-[ext_resource type="Texture2D" uid="uid://qxqofct7nmx" path="res://kenney_roguelike-characters/Spritesheet/megablock.png" id="14_gaoq1"]
 
 [sub_resource type="Resource" id="Resource_3rf0f"]
 script = ExtResource("4_j810w")
 number = "8"
-icon = ExtResource("3_u56pn")
+icon = ExtResource("3_60gby")
+tooltip_text = "[center]Session Fixation[center]"
 
 [sub_resource type="Resource" id="Resource_e7gpa"]
 script = ExtResource("4_j810w")
 number = "8"
-icon = ExtResource("7_yqgjb")
+icon = ExtResource("7_m1q6w")
+tooltip_text = "[center]RPC Expolits[center]"
 
 [sub_resource type="Resource" id="Resource_bud75"]
 script = ExtResource("4_j810w")
 number = "8"
-icon = ExtResource("9_ndddc")
-
-[sub_resource type="Resource" id="Resource_lnylu"]
-script = ExtResource("4_j810w")
-number = "6"
-icon = ExtResource("9_ndddc")
-
-[sub_resource type="Resource" id="Resource_bhdk0"]
-script = ExtResource("4_j810w")
-number = "15"
-icon = ExtResource("14_gaoq1")
+icon = ExtResource("9_en80u")
+tooltip_text = "[center]Session Timeout Abuse[center]"
 
 [node name="SessionEnemyAI" type="Node"]
 script = ExtResource("1_k1iv5")
@@ -68,15 +57,3 @@ sound = ExtResource("10_7nk8c")
 type = 1
 isAttack = true
 chance_weight = 1.0
-
-[node name="BlockAction" type="Node" parent="."]
-script = ExtResource("5_joold")
-intent = SubResource("Resource_lnylu")
-sound = ExtResource("12_gndpo")
-type = 1
-chance_weight = 1.0
-
-[node name="MegaBlockAction" type="Node" parent="."]
-script = ExtResource("6_gpmq5")
-intent = SubResource("Resource_bhdk0")
-sound = ExtResource("12_gndpo")

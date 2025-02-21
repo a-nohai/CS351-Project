@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://brsn3ydwxtrgc"]
 
-[ext_resource type="Texture2D" uid="uid://bnoe21latb3a8" path="res://kenney_roguelike-characters/Spritesheet/block.png" id="1_ydnxf"]
+[ext_resource type="Texture2D" uid="uid://so2e7d8ncxx1" path="res://textures/icons/defences/firewallrules.png" id="1_njaao"]
 [ext_resource type="Script" path="res://characters/warrior/cards/physical/shielding.gd" id="2_jveui"]
 [ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="3_lutrm"]
 
@@ -10,6 +10,6 @@ id = "firewall_rules"
 type = 1
 target = 0
 cost = 1
-icon = ExtResource("1_ydnxf")
+icon = ExtResource("1_njaao")
 tooltip_text = "[center][color=\"0044ff\"]Firewall Rules[/color].[/center]"
 sound = ExtResource("3_lutrm")

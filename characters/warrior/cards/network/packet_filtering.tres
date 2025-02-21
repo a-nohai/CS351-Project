@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://c0b2y65kep7r5"]
 
-[ext_resource type="Texture2D" uid="uid://bmudpl1v1abps" path="res://kenney_roguelike-characters/Spritesheet/cable_guarding.png" id="1_660wg"]
+[ext_resource type="Texture2D" uid="uid://y4bucra8aq0w" path="res://textures/icons/defences/packetfiltering.png" id="1_ml7k5"]
 [ext_resource type="Script" path="res://characters/warrior/cards/physical/cable_guarding.gd" id="2_4s181"]
 [ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="3_wk8th"]
 
@@ -10,6 +10,6 @@ id = "packet_filtering"
 type = 1
 target = 0
 cost = 1
-icon = ExtResource("1_660wg")
+icon = ExtResource("1_ml7k5")
 tooltip_text = "[center][color=\"0044ff\"]Packet Filtering[/color].[/center]"
 sound = ExtResource("3_wk8th")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://j0byw8pf258u"]
+
+[ext_resource type="Texture2D" uid="uid://bq8d4j521gi2u" path="res://textures/icons/presentation.png" id="1_w2pti"]
+[ext_resource type="Script" path="res://characters/warrior/cards/final/presentation.gd" id="2_s3mgq"]
+
+[resource]
+script = ExtResource("2_s3mgq")
+id = "presentation"
+type = 1
+target = 0
+cost = 1
+icon = ExtResource("1_w2pti")
+tooltip_text = "[center][color=\"0044ff\"]Presentation[/color].[/center]"

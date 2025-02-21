@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b6jnbid8dtwvy"]
+
+[ext_resource type="Texture2D" uid="uid://edo6o3rlu38d" path="res://textures/icons/network.png" id="1_l1xp0"]
+[ext_resource type="Script" path="res://characters/warrior/cards/final/network.gd" id="2_2fcij"]
+
+[resource]
+script = ExtResource("2_2fcij")
+id = "network"
+type = 1
+target = 0
+cost = 1
+icon = ExtResource("1_l1xp0")
+tooltip_text = "[center][color=\"0044ff\"]Network[/color].[/center]"

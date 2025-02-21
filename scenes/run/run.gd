@@ -10,6 +10,7 @@ const NETWORK_DECK := preload("res://characters/warrior/warrior_network_deck.tre
 const PRESENTATION_DECK := preload("res://characters/warrior/warrior_presentation_deck.tres")
 const SESSION_DECK := preload("res://characters/warrior/warrior_session_deck.tres")
 const TRANSPORT_DECK := preload("res://characters/warrior/warrior_transport_deck.tres")
+const FINAL_DECK := preload("res://characters/warrior/warrior_final_deck.tres")
 const MAIN_MENU_PATH := "res://scenes/ui/main_menu.tscn"
 
 @export var run_startup: RunStartup
@@ -19,8 +20,6 @@ const MAIN_MENU_PATH := "res://scenes/ui/main_menu.tscn"
 
 @onready var map: Control = $Map
 @onready var current_view: Node = $CurrentView
-@onready var battle_button: Button = $"%BattleButton"
-@onready var map_button: Button = $"%MapButton"
 @onready var points_ui: PointsUI = $PointsUI
 @onready var pause_menu: PauseMenu = $PauseMenu
 @onready var wrong_answers_panel: WrongAnswersPanel = $WrongAnswersPanel
@@ -113,9 +112,6 @@ func _setup_event_connections() -> void:
 	Events.map_exited.connect(_on_map_exited)
 	Events.points_changed.connect(_on_points_changed)
 	Events.briefing_read.connect(_on_briefing_read)
-	
-	battle_button.pressed.connect(_change_view.bind(BATTLE_SCENE))
-	map_button.pressed.connect(_show_map)
 
 func _on_battle_room_entered() -> void:
 	var battle_scene: Battle = await _change_view(BATTLE_SCENE) as Battle
@@ -142,7 +138,7 @@ func _on_battle_room_entered() -> void:
 			character.deck = TRANSPORT_DECK
 			battle_scene.battle_stats = preload("res://battles/transport/transport1.tres")
 		"Final":
-			character.deck = TRANSPORT_DECK
+			character.deck = FINAL_DECK
 			battle_scene.battle_stats = preload("res://battles/final/final.tres")
 	character.set_health(character.max_health)
 	battle_scene.battle_info.set_layer(current_layer.layer)

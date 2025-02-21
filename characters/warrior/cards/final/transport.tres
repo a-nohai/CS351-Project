@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://b5termw5ojlg8"]
+
+[ext_resource type="Texture2D" uid="uid://bcfw3ccu4x6s4" path="res://textures/icons/transport.png" id="1_e1tq5"]
+[ext_resource type="Script" path="res://characters/warrior/cards/final/transport.gd" id="2_l4ubh"]
+
+[resource]
+script = ExtResource("2_l4ubh")
+id = "transport"
+type = 1
+target = 0
+cost = 1
+icon = ExtResource("1_e1tq5")
+tooltip_text = "[center][color=\"0044ff\"]Transport[/color].[/center]"

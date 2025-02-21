@@ -25,8 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://c24xf71rs86v8" path="res://scenes/ui/mcq_panel.tscn" id="20_grr13"]
 [ext_resource type="Texture2D" uid="uid://c2ylmut3aur2x" path="res://cursor.png" id="23_2ih6y"]
 [ext_resource type="Resource" uid="uid://c54gl4gewpfwq" path="res://scenes/ui/wrong_answers.tres" id="24_4m4to"]
-[ext_resource type="Texture2D" uid="uid://dkioldswuhpa1" path="res://kenney_roguelike-characters/Spritesheet/fireball.png" id="24_gld3x"]
-[ext_resource type="Texture2D" uid="uid://coasovla6i54r" path="res://kenney_roguelike-characters/Spritesheet/physical_security.png" id="25_vdn1m"]
+[ext_resource type="Texture2D" uid="uid://bt5xrnwhraida" path="res://textures/icons/attack.png" id="25_7piid"]
+[ext_resource type="Texture2D" uid="uid://lbnhp52wni7a" path="res://textures/icons/defences/physicalsecurity.png" id="26_om20c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_khkfc"]
 size = Vector2(1920, 795)
@@ -155,13 +155,13 @@ tracks/3/keys = {
 "args": [],
 "method": &"hide_tooltip"
 }, {
-"args": [ExtResource("24_gld3x"), "[center]Try playing the attack card with this icon[center]"],
+"args": [ExtResource("25_7piid"), "[center]Try playing the attack card with this icon[center]"],
 "method": &"show_tooltip"
 }, {
 "args": [],
 "method": &"hide_tooltip"
 }, {
-"args": [ExtResource("24_gld3x"), "[center]Select it from your hand, click and drag over the enemy, and release to play[center]"],
+"args": [ExtResource("25_7piid"), "[center]Select it from your hand, click and drag over the enemy, and release to play[center]"],
 "method": &"show_tooltip"
 }, {
 "args": [],
@@ -188,46 +188,13 @@ tracks/0/keys = {
 "args": [],
 "method": &"hide_tooltip"
 }, {
-"args": [ExtResource("25_vdn1m"), "[center]Now, play the defence card with this icon to set up your defence[center]"],
+"args": [ExtResource("26_om20c"), "[center]Now, play the defence card with this icon to set up your defence[center]"],
 "method": &"show_tooltip"
 }, {
 "args": [],
 "method": &"hide_tooltip"
 }, {
-"args": [ExtResource("25_vdn1m"), "[center]Select it from your hand, click and drag over the player, and release to play[center]"],
-"method": &"show_tooltip"
-}, {
-"args": [],
-"method": &"hide_tooltip"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_vheob"]
-resource_name = "step1_2"
-length = 15.0
-tracks/0/type = "method"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("BattleUI/TutorialTooltip")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.01, 4.81, 5.11, 10.34, 10.65, 14.99),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"values": [{
-"args": [null, "[center]You have just answered your first question! You have received damage according to your answer[center]"],
-"method": &"show_tooltip"
-}, {
-"args": [],
-"method": &"hide_tooltip"
-}, {
-"args": [ExtResource("24_gld3x"), "[center]The enemy is one hit away from being defeated, select the attack card to finish it off[center]"],
-"method": &"show_tooltip"
-}, {
-"args": [],
-"method": &"hide_tooltip"
-}, {
-"args": [null, "[center]After this, you will be on your own. Good Luck![center]"],
+"args": [ExtResource("26_om20c"), "[center]Select it from your hand, click and drag over the player, and release to play[center]"],
 "method": &"show_tooltip"
 }, {
 "args": [],
@@ -280,6 +247,39 @@ tracks/0/keys = {
 }]
 }
 
+[sub_resource type="Animation" id="Animation_vheob"]
+resource_name = "step1_2"
+length = 15.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BattleUI/TutorialTooltip")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.01, 4.81, 5.11, 10.34, 10.65, 14.99),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [null, "[center]You have just answered your first question! You have received damage according to your answer[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [ExtResource("25_7piid"), "[center]The enemy is one hit away from being defeated, select the attack card to finish it off[center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}, {
+"args": [null, "[center]After this, you will be on your own. Good Luck![center]"],
+"method": &"show_tooltip"
+}, {
+"args": [],
+"method": &"hide_tooltip"
+}]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_72grj"]
 _data = {
 "RESET": SubResource("Animation_2wpox"),
@@ -312,6 +312,7 @@ shape = SubResource("RectangleShape2D_khkfc")
 debug_color = Color(0, 0.6, 0.701961, 0.27451)
 
 [node name="EnemyHandler" type="Node2D" parent="."]
+position = Vector2(1, 0)
 script = ExtResource("3_cvhin")
 
 [node name="Enemy" parent="EnemyHandler" instance=ExtResource("4_f5u3k")]

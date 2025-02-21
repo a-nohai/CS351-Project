@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://cv08kv60w7tpi"]
 
-[ext_resource type="Texture2D" uid="uid://bmudpl1v1abps" path="res://kenney_roguelike-characters/Spritesheet/cable_guarding.png" id="1_uejn0"]
+[ext_resource type="Texture2D" uid="uid://by2nry2abg8kg" path="res://textures/icons/defences/sessiontimeoutenforcement.png" id="1_al1v4"]
 [ext_resource type="Script" path="res://characters/warrior/cards/physical/cable_guarding.gd" id="2_qef7v"]
 [ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="3_k5wl0"]
 
@@ -10,6 +10,6 @@ id = "session_timeout"
 type = 1
 target = 0
 cost = 1
-icon = ExtResource("1_uejn0")
+icon = ExtResource("1_al1v4")
 tooltip_text = "[center][color=\"0044ff\"]Session Timeout Enforcement[/color].[/center]"
 sound = ExtResource("3_k5wl0")

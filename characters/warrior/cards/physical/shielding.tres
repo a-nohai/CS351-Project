@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://cy2wnsk0mbchv"]
 
-[ext_resource type="Texture2D" uid="uid://bnoe21latb3a8" path="res://kenney_roguelike-characters/Spritesheet/block.png" id="1_1oymg"]
 [ext_resource type="Script" path="res://characters/warrior/cards/physical/shielding.gd" id="1_k58tp"]
+[ext_resource type="Texture2D" uid="uid://cc4s38nna78t5" path="res://textures/icons/defences/shielding.png" id="1_wkf1g"]
 [ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="3_53qhn"]
 
 [resource]
@@ -10,6 +10,6 @@ id = "shielding"
 type = 1
 target = 0
 cost = 1
-icon = ExtResource("1_1oymg")
+icon = ExtResource("1_wkf1g")
 tooltip_text = "[center][color=\"0044ff\"]Shielding[/color].[/center]"
 sound = ExtResource("3_53qhn")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://4srs7kh73kaq"]
 
 [ext_resource type="Script" path="res://scenes/enemy/enemy.gd" id="1_3wiv6"]
-[ext_resource type="Texture2D" uid="uid://bajre4wu0msxe" path="res://kenney_roguelike-characters/Spritesheet/enemy.png" id="2_36igv"]
+[ext_resource type="Texture2D" uid="uid://dquxf385raimr" path="res://textures/sprites/main_char.png" id="2_uud0x"]
 [ext_resource type="Texture2D" uid="uid://c2ylmut3aur2x" path="res://cursor.png" id="3_mptac"]
 [ext_resource type="PackedScene" uid="uid://cirqi7axyes6b" path="res://scenes/ui/stats_ui.tscn" id="3_wmwn0"]
 [ext_resource type="PackedScene" uid="uid://bv70fpbl7ueny" path="res://scenes/ui/intent_ui.tscn" id="5_oorai"]
@@ -14,9 +14,8 @@ collision_layer = 4
 script = ExtResource("1_3wiv6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(12, 13.7857)
-texture = ExtResource("2_36igv")
-region_enabled = true
+scale = Vector2(1.4, 1.609)
+texture = ExtResource("2_uud0x")
 region_rect = Rect2(0, 2, 16, 14)
 
 [node name="Arrow" type="Sprite2D" parent="."]

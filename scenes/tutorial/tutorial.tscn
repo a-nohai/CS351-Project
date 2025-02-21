@@ -32,23 +32,5 @@ current_layer = SubResource("Resource_e0pdh")
 
 [node name="CurrentView" type="Node" parent="."]
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -98.0
-offset_right = 140.0
-grow_vertical = 0
-
-[node name="MapButton" type="Button" parent="VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Map"
-
-[node name="BattleButton" type="Button" parent="VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Battle"
-
 [node name="PointsUI" parent="." instance=ExtResource("3_a0okm")]
 visible = false

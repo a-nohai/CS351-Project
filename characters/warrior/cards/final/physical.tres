@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://byojnalintacq"]
+
+[ext_resource type="Texture2D" uid="uid://yqs6r8a0s83t" path="res://textures/icons/physical.png" id="1_8ocx7"]
+[ext_resource type="Script" path="res://characters/warrior/cards/final/phyiscal.gd" id="2_xxkid"]
+
+[resource]
+script = ExtResource("2_xxkid")
+id = "physical"
+type = 1
+target = 0
+cost = 1
+icon = ExtResource("1_8ocx7")
+tooltip_text = "[center][color=\"0044ff\"]Physical[/color].[/center]"

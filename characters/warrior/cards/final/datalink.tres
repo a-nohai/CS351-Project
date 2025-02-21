@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://cacn2w1ybuoy0"]
+
+[ext_resource type="Texture2D" uid="uid://cx778xaf6f2f5" path="res://textures/icons/datalink.png" id="1_u8khu"]
+[ext_resource type="Script" path="res://characters/warrior/cards/final/datalink.gd" id="2_mrcjv"]
+
+[resource]
+script = ExtResource("2_mrcjv")
+id = "data"
+type = 1
+target = 0
+cost = 1
+icon = ExtResource("1_u8khu")
+tooltip_text = "[center][color=\"0044ff\"]Data Link[/color].[/center]"

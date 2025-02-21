@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=4 format=3 uid="uid://ba6mlytp8cfjr"]
 
-[ext_resource type="Texture2D" uid="uid://bmudpl1v1abps" path="res://kenney_roguelike-characters/Spritesheet/cable_guarding.png" id="1_7uth5"]
+[ext_resource type="Texture2D" uid="uid://co81ftttkwbet" path="res://textures/icons/defences/twofactorauthentication.png" id="1_ilnay"]
 [ext_resource type="Script" path="res://characters/warrior/cards/physical/cable_guarding.gd" id="2_lo61d"]
 [ext_resource type="AudioStream" uid="uid://dnkhddcyfvlja" path="res://sounds/39_Block_03.wav" id="3_o8pos"]
 
@@ -10,6 +10,6 @@ id = "two_factor"
 type = 1
 target = 0
 cost = 1
-icon = ExtResource("1_7uth5")
+icon = ExtResource("1_ilnay")
 tooltip_text = "[center][color=\"0044ff\"]Two Factor Authentication[/color].[/center]"
 sound = ExtResource("3_o8pos")

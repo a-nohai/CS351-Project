@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://bw70d0njpvnt2"]
+
+[ext_resource type="Texture2D" uid="uid://lvuk0u5beaob" path="res://textures/icons/session.png" id="1_i36e6"]
+[ext_resource type="Script" path="res://characters/warrior/cards/final/session.gd" id="2_1siag"]
+
+[resource]
+script = ExtResource("2_1siag")
+id = "session"
+type = 1
+target = 0
+cost = 1
+icon = ExtResource("1_i36e6")
+tooltip_text = "[center][color=\"0044ff\"]Session[/color].[/center]"

@@ -3,7 +3,7 @@
 		"layer": "Tutorial",
 		"questionset": [
 			{
-				"question": "What physical security measure helps prevent unauthorized access to server rooms?",
+				"question": "What physical security measure helps prevent unauthorised access to server rooms?",
 				"answers": [
 					"Biometric authentication",
 					"Port mirroring",
@@ -18,7 +18,7 @@
 		"layer": "Final",
 		"questionset": [
 			{
-				"question": "What physical security measure helps prevent unauthorized access to server rooms?",
+				"question": "What physical security measure helps prevent unauthorised access to server rooms?",
 				"answers": [
 					"Biometric authentication",
 					"Port mirroring",
@@ -163,7 +163,7 @@
 		"layer": "Physical",
 		"questionset": [
 			{
-				"question": "What physical security measure helps prevent unauthorized access to server rooms?",
+				"question": "What physical security measure helps prevent unauthorised access to server rooms?",
 				"answers": [
 					"Biometric authentication",
 					"Port mirroring",
@@ -173,7 +173,7 @@
 				"correct_option": "Biometric authentication"
 			},
 			{
-				"question": "What is the most effective way to prevent unauthorized access to network cables?",
+				"question": "What is the most effective way to prevent unauthorised access to network cables?",
 				"answers": [
 					"Cable shielding",
 					"Port security",
@@ -193,7 +193,7 @@
 				"correct_option": "Security Guards"
 			},
 			{
-				"question": "How can electromagnetic interference (EMI) be minimized in network cables?",
+				"question": "How can electromagnetic interference (EMI) be minimised in network cables?",
 				"answers": [
 					"Using shielded cables",
 					"Disabling unused ports",
@@ -280,12 +280,12 @@
 			{
 				"question": "How does 802.1X authentication enhance network security?",
 				"answers": [
-					"Prevents unauthorized access",
+					"Prevents unauthorised access",
 					"Encrypts all network data",
 					"Speeds up data transmission",
 					"Blocks spam emails"
 				],
-				"correct_option": "Prevents unauthorized access"
+				"correct_option": "Prevents unauthorised access"
 			},
 			{
 				"question": "What is the main function of a switch in the data link layer?",
@@ -633,7 +633,7 @@
 					"Reduce file size for transmission",
 					"Enhance encryption",
 					"Improve routing speed",
-					"Block unauthorized access"
+					"Block unauthorised access"
 				],
 				"correct_option": "Reduce file size for transmission"
 			},

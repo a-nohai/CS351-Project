@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="CardPile" load_steps=11 format=3 uid="uid://b0ou8tlp8ts24"]
+
+[ext_resource type="Script" path="res://custom_resources/card.gd" id="1_1i31q"]
+[ext_resource type="Resource" uid="uid://b3prykff2vpen" path="res://characters/warrior/cards/warrior_axe_attack.tres" id="2_2c7jd"]
+[ext_resource type="Resource" uid="uid://b5termw5ojlg8" path="res://characters/warrior/cards/final/transport.tres" id="3_xpy6f"]
+[ext_resource type="Resource" uid="uid://bw70d0njpvnt2" path="res://characters/warrior/cards/final/session.tres" id="4_o41th"]
+[ext_resource type="Resource" uid="uid://j0byw8pf258u" path="res://characters/warrior/cards/final/presentation.tres" id="5_815rb"]
+[ext_resource type="Resource" uid="uid://byojnalintacq" path="res://characters/warrior/cards/final/physical.tres" id="6_cseu8"]
+[ext_resource type="Script" path="res://custom_resources/card_pile.gd" id="6_e41np"]
+[ext_resource type="Resource" uid="uid://b6jnbid8dtwvy" path="res://characters/warrior/cards/final/network.tres" id="7_abrv0"]
+[ext_resource type="Resource" uid="uid://cacn2w1ybuoy0" path="res://characters/warrior/cards/final/datalink.tres" id="8_axyju"]
+[ext_resource type="Resource" uid="uid://brvkwkk7cy0be" path="res://characters/warrior/cards/final/application.tres" id="9_m400k"]
+
+[resource]
+script = ExtResource("6_e41np")
+cards = Array[ExtResource("1_1i31q")]([ExtResource("2_2c7jd"), ExtResource("2_2c7jd"), ExtResource("2_2c7jd"), ExtResource("3_xpy6f"), ExtResource("4_o41th"), ExtResource("5_815rb"), ExtResource("6_cseu8"), ExtResource("7_abrv0"), ExtResource("8_axyju"), ExtResource("9_m400k")])
