@@ -45,7 +45,10 @@ func start_battle() -> void:
 
 func _on_enemies_child_order_changed() -> void:
 	if enemy_handler.get_child_count() == 0:
-		Events.battle_over_screen_requested.emit("Victory!", BattleOverPanel.Type.WIN)
+		if current_layer.layer == "Final":
+			Events.battle_over_screen_requested.emit("Congratulations! You have completed your training!", BattleOverPanel.Type.FINAL)
+		else:
+			Events.battle_over_screen_requested.emit("Victory!", BattleOverPanel.Type.WIN)
 
 func _on_enemy_turn_ended() -> void:
 	battle_info.set_turn("Player")

@@ -250,12 +250,12 @@
 			{
 				"question": "What technique helps prevent MAC address spoofing?",
 				"answers": [
-					"Port Security",
+					"Dynamic ARP Inspection",
 					"Firewalls",
 					"Data Encryption",
 					"Frequency Hopping"
 				],
-				"correct_option": "Port Security"
+				"correct_option": "Dynamic ARP Inspection"
 			},
 			{
 				"question": "What is the primary purpose of VLANs at the data link layer?",

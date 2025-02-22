@@ -35,12 +35,14 @@ theme_override_constants/separation = 25
 
 [node name="Label" type="Label" parent="VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(800, 150)
 layout_mode = 2
 size_flags_horizontal = 4
 text = "Victory!"
 label_settings = SubResource("LabelSettings_0ao5l")
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="ContinueButton" type="Button" parent="VBoxContainer"]
 unique_name_in_owner = true
@@ -59,3 +61,12 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 34
 text = "Restart"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 34
+text = "Exit Game"

@@ -297,7 +297,7 @@ current_layer = ExtResource("4_087bw")
 metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="."]
-modulate = Color(0.601223, 0.601223, 0.601223, 1)
+modulate = Color(0.433266, 0.433266, 0.433266, 1)
 scale = Vector2(0.48, 0.404949)
 texture = ExtResource("2_wg2l1")
 centered = false

@@ -139,6 +139,8 @@ func _on_battle_room_entered() -> void:
 			battle_scene.battle_stats = preload("res://battles/transport/transport1.tres")
 		"Final":
 			character.deck = FINAL_DECK
+			character.cards_per_turn = 7
+			character.max_health = 30
 			battle_scene.battle_stats = preload("res://battles/final/final.tres")
 	character.set_health(character.max_health)
 	battle_scene.battle_info.set_layer(current_layer.layer)
