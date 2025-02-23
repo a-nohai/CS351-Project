@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_n0l4t")
-tooltip_text = "[center][color=\"0044ff\"]VLAN Segmentation[/color].[/center]"
+tooltip_text = "[center]	VLAN Segmentation – Separates network traffic into isolated VLANs to prevent unauthorised access.	[center]"
 sound = ExtResource("3_drav8")

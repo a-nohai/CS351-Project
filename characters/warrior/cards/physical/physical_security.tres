@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_jj52x")
-tooltip_text = "[center][color=\"0044ff\"]Physical Security[/color].[/center]"
+tooltip_text = "[center]	Physical Security – Protects hardware using access controls like biometric locks and surveillance.	[center]"
 sound = ExtResource("3_nm73f")

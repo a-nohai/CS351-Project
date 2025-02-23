@@ -14,19 +14,19 @@
 script = ExtResource("4_ek5b7")
 number = "8"
 icon = ExtResource("3_iec8m")
-tooltip_text = "[center]MAC Flooding[center]"
+tooltip_text = "[center]MAC Flooding – Overloads a network switch by flooding it with fake MAC addresses.[center]"
 
 [sub_resource type="Resource" id="Resource_u544s"]
 script = ExtResource("4_ek5b7")
 number = "8"
 icon = ExtResource("7_mkaub")
-tooltip_text = "[center]MAC Spoofing[center]"
+tooltip_text = "[center]MAC Spoofing – Attacker disguises their MAC address to bypass security measures.[center]"
 
 [sub_resource type="Resource" id="Resource_uxk2r"]
 script = ExtResource("4_ek5b7")
 number = "8"
 icon = ExtResource("9_2iyou")
-tooltip_text = "[center]ARP Poisoning[center]"
+tooltip_text = "[center]ARP Poisoning – Manipulates ARP tables to intercept or alter network traffic.[center]"
 
 [node name="DataEnemyAI" type="Node"]
 script = ExtResource("1_7j7go")

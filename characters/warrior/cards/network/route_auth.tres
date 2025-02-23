@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_wb6w2")
-tooltip_text = "[center][color=\"0044ff\"]Route Authentication[/color].[/center]"
+tooltip_text = "[center]	Route Authentication – Ensures routing data integrity by verifying sources.	[center]"
 sound = ExtResource("3_myyd5")

@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_wkf1g")
-tooltip_text = "[center][color=\"0044ff\"]Shielding[/color].[/center]"
+tooltip_text = "[center]	Shielding – Uses electromagnetic shielding to prevent signal disruption and interference.	[center]"
 sound = ExtResource("3_53qhn")

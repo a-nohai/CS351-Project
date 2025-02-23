@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_7srsg")
-tooltip_text = "[center][color=\"0044ff\"]Data Encryption[/color].[/center]"
+tooltip_text = "[center]	Data Encryption – Uses cryptographic techniques to protect data from unauthorised modification.	[center]"
 sound = ExtResource("3_0ascm")

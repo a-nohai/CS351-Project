@@ -14,19 +14,19 @@
 script = ExtResource("4_kjaui")
 number = "8"
 icon = ExtResource("3_ex2j7")
-tooltip_text = "[center]IP spoofing[center]"
+tooltip_text = "[center]IP Spoofing – Fakes the source IP address to disguise an attacker’s identity.[center]"
 
 [sub_resource type="Resource" id="Resource_jcekd"]
 script = ExtResource("4_kjaui")
 number = "8"
 icon = ExtResource("7_uxvq1")
-tooltip_text = "[center]DDoS[center]"
+tooltip_text = "[center]DDoS – Overloads a system with excessive traffic to disrupt services.[center]"
 
 [sub_resource type="Resource" id="Resource_vp12m"]
 script = ExtResource("4_kjaui")
 number = "8"
 icon = ExtResource("9_mj6xv")
-tooltip_text = "[center]Routing table poisoning[center]"
+tooltip_text = "[center]Routing Table Poisoning – Injects false routing information to misdirect traffic.[center]"
 
 [node name="NetworkEnemyAI" type="Node"]
 script = ExtResource("1_senws")

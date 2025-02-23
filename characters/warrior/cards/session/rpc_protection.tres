@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_en7bd")
-tooltip_text = "[center][color=\"0044ff\"]RPC Protection[/color].[/center]"
+tooltip_text = "[center]	RPC Protection – Secures remote procedure calls against exploitation and tampering.	[center]"
 sound = ExtResource("3_6xgh2")

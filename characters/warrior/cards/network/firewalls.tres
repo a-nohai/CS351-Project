@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_f8gaq")
-tooltip_text = "[center][color=\"0044ff\"]Firewalls[/color].[/center]"
+tooltip_text = "[center]	Firewalls – Filters network traffic based on security rules to block malicious activity.	[center]"
 sound = ExtResource("3_7huri")

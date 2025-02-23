@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_ml7k5")
-tooltip_text = "[center][color=\"0044ff\"]Packet Filtering[/color].[/center]"
+tooltip_text = "[center]	Packet Filtering – Inspects and blocks harmful network packets before they reach their destination.	[center]"
 sound = ExtResource("3_wk8th")

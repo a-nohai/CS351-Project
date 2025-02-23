@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_df2yw")
-tooltip_text = "[center][color=\"0044ff\"]SSL/TLS Encryption[/color].[/center]"
+tooltip_text = "[center]	SSL/TLS Encryption – Encrypts communication to prevent eavesdropping and tampering.	[center]"
 sound = ExtResource("3_i6u18")

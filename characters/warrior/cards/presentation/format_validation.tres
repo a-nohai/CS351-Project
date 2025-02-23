@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_cknqq")
-tooltip_text = "[center][color=\"0044ff\"]Format Validation[/color].[/center]"
+tooltip_text = "[center]	Format Validation – Ensures data integrity by verifying input formats before processing.	[center]"
 sound = ExtResource("3_rhy2d")

@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_13iji")
-tooltip_text = "[center][color=\"0044ff\"]Cable Guarding[/color].[/center]"
+tooltip_text = "[center]	Cable Guarding – Protects cables using reinforced conduits and underground placement.	[center]"
 sound = ExtResource("3_miaal")

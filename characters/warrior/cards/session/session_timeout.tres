@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_al1v4")
-tooltip_text = "[center][color=\"0044ff\"]Session Timeout Enforcement[/color].[/center]"
+tooltip_text = "[center]	Session Timeout Enforcement – Ends inactive sessions to prevent unauthorised use.	[center]"
 sound = ExtResource("3_k5wl0")

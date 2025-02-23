@@ -10,7 +10,7 @@
 script = ExtResource("4_41d0u")
 number = "8"
 icon = ExtResource("3_i51lg")
-tooltip_text = "[center]Wiretapping[center]"
+tooltip_text = "[center]Wiretapping – Unauthorised interception of network communications by tapping into physical cables.[center]"
 
 [node name="TutorialEnemyAI" type="Node"]
 script = ExtResource("1_5i4q6")

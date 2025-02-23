@@ -14,19 +14,19 @@
 script = ExtResource("4_j810w")
 number = "8"
 icon = ExtResource("3_60gby")
-tooltip_text = "[center]Session Fixation[center]"
+tooltip_text = "[center]Session Fixation – Forces a user to use a pre-defined session ID to hijack access.[center]"
 
 [sub_resource type="Resource" id="Resource_e7gpa"]
 script = ExtResource("4_j810w")
 number = "8"
 icon = ExtResource("7_m1q6w")
-tooltip_text = "[center]RPC Expolits[center]"
+tooltip_text = "[center]RPC Exploits – Exploits vulnerabilities in Remote Procedure Calls to gain control.[center]"
 
 [sub_resource type="Resource" id="Resource_bud75"]
 script = ExtResource("4_j810w")
 number = "8"
 icon = ExtResource("9_en80u")
-tooltip_text = "[center]Session Timeout Abuse[center]"
+tooltip_text = "[center]Session Timeout Abuse – Manipulates session expiration mechanisms to prolong access.[center]"
 
 [node name="SessionEnemyAI" type="Node"]
 script = ExtResource("1_k1iv5")

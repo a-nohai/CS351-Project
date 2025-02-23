@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_27kym")
-tooltip_text = "[center][color=\"0044ff\"]Dynamic ARP Inspection[/color].[/center]"
+tooltip_text = "[center]	Dynamic ARP Inspection – Blocks ARP-based spoofing attacks by verifying address mappings.	[center]"
 sound = ExtResource("3_mok7j")

@@ -14,19 +14,19 @@
 script = ExtResource("4_2ggkj")
 number = "8"
 icon = ExtResource("3_ds84p")
-tooltip_text = "[center]Data Tampering[center]"
+tooltip_text = "[center]Data Tampering – Modifies data in transit to alter information or inject malicious content.[center]"
 
 [sub_resource type="Resource" id="Resource_sx027"]
 script = ExtResource("4_2ggkj")
 number = "8"
 icon = ExtResource("7_xiyhp")
-tooltip_text = "[center]Man in the Middle[center]"
+tooltip_text = "[center]Man-in-the-Middle – Intercepts and alters communication between two parties.[center]"
 
 [sub_resource type="Resource" id="Resource_8re6o"]
 script = ExtResource("4_2ggkj")
 number = "8"
 icon = ExtResource("9_k1yrg")
-tooltip_text = "[center]Encoding Exploits[center]"
+tooltip_text = "[center]Encoding Exploits – Uses manipulated encoding schemes to bypass security filters.[center]"
 
 [node name="PresentationEnemyAI" type="Node"]
 script = ExtResource("1_ojkma")

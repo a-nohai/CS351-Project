@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_moasb")
-tooltip_text = "[center][color=\"0044ff\"Secure Authentication[/color].[/center]"
+tooltip_text = "[center]	Secure Authentication – Strengthens identity verification for secure access control.	[center]"
 sound = ExtResource("3_rahhc")

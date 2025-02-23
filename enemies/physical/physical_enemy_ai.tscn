@@ -14,19 +14,19 @@
 script = ExtResource("4_ores5")
 number = "8"
 icon = ExtResource("3_yn7we")
-tooltip_text = "[center]Wiretapping[center]"
+tooltip_text = "[center]Wiretapping – Unauthorised interception of network communications by tapping into physical cables.[center]"
 
 [sub_resource type="Resource" id="Resource_7vyal"]
 script = ExtResource("4_ores5")
 number = "8"
 icon = ExtResource("7_n5ns5")
-tooltip_text = "[center]Jamming[center]"
+tooltip_text = "[center]Jamming – Disrupts wireless communication by flooding frequencies with interference.[center]"
 
 [sub_resource type="Resource" id="Resource_h8ov7"]
 script = ExtResource("4_ores5")
 number = "8"
 icon = ExtResource("9_gcr6j")
-tooltip_text = "[center]Cable Cut[center]"
+tooltip_text = "[center]Cable Cut – Physical severing of network cables to disrupt communication.[center]"
 
 [node name="PhysicalEnemyAI" type="Node"]
 script = ExtResource("1_m2d53")

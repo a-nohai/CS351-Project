@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_sg02v")
-tooltip_text = "[center][color=\"0044ff\"]Web Application Firewall[/color].[/center]"
+tooltip_text = "[center]	Web Application Firewall – Monitors and blocks malicious web requests.	[center]"
 sound = ExtResource("3_eiflw")

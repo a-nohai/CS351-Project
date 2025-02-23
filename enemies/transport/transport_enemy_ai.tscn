@@ -14,19 +14,19 @@
 script = ExtResource("4_3vp25")
 number = "8"
 icon = ExtResource("3_au7ba")
-tooltip_text = "[center]SYN Flood[center]"
+tooltip_text = "[center]SYN Flood – Exploits the TCP handshake process to overwhelm a server.[center]"
 
 [sub_resource type="Resource" id="Resource_fix54"]
 script = ExtResource("4_3vp25")
 number = "8"
 icon = ExtResource("7_ycorq")
-tooltip_text = "[center]Session Hijacking[center]"
+tooltip_text = "[center]Session Hijacking – Takes over an active session to gain unauthorised access.[center]"
 
 [sub_resource type="Resource" id="Resource_gmkeg"]
 script = ExtResource("4_3vp25")
 number = "8"
 icon = ExtResource("9_nvj81")
-tooltip_text = "[center]Port Scanning[center]"
+tooltip_text = "[center]Port Scanning – Identifies open network ports to find vulnerabilities.[center]"
 
 [node name="TransportEnemyAI" type="Node"]
 script = ExtResource("1_7tgbi")

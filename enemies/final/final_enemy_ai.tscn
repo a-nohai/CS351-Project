@@ -50,127 +50,127 @@
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("3_kb1aj")
-tooltip_text = "[center]SYN Flood[center]"
+tooltip_text = "[center]SYN Flood – Exploits the TCP handshake process to overwhelm a server.[center]"
 
 [sub_resource type="Resource" id="Resource_1yld6"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("7_jxjtk")
-tooltip_text = "[center]Session Hijacking[center]"
+tooltip_text = "[center]Session Hijacking – Takes over an active session to gain unauthorised access.[center]"
 
 [sub_resource type="Resource" id="Resource_nfl3x"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("9_ocojw")
-tooltip_text = "[center]Port Scanning[center]"
+tooltip_text = "[center]Port Scanning – Identifies open network ports to find vulnerabilities.[center]"
 
 [sub_resource type="Resource" id="Resource_y0gvj"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("11_kygx4")
-tooltip_text = "[center]MAC Flooding[center]"
+tooltip_text = "[center]MAC Flooding – Overloads a network switch by flooding it with fake MAC addresses.[center]"
 
 [sub_resource type="Resource" id="Resource_4b11c"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("13_ggnrk")
-tooltip_text = "[center]MAC Spoofing[center]"
+tooltip_text = "[center]MAC Spoofing – Attacker disguises their MAC address to bypass security measures.[center]"
 
 [sub_resource type="Resource" id="Resource_vys38"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("15_iyjfb")
-tooltip_text = "[center]ARP Poisoning[center]"
+tooltip_text = "[center]ARP Poisoning – Manipulates ARP tables to intercept or alter network traffic.[center]"
 
 [sub_resource type="Resource" id="Resource_1c2y3"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("17_j8adf")
-tooltip_text = "[center]SQL Injection[center]"
+tooltip_text = "[center]SQL Injection – Injects malicious SQL queries to manipulate or extract database data.[center]"
 
 [sub_resource type="Resource" id="Resource_x13ht"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("19_72c32")
-tooltip_text = "[center]Cross Site Scripting[center]"
+tooltip_text = "[center]Cross-Site Scripting (XSS) – Injects scripts into web pages to exploit users.[center]"
 
 [sub_resource type="Resource" id="Resource_hx6pa"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("21_y0nr8")
-tooltip_text = "[center]Phishing[center]"
+tooltip_text = "[center]Phishing – Deceives users into revealing sensitive information through fake sites or emails.[center]"
 
 [sub_resource type="Resource" id="Resource_q5u4m"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("23_ar1de")
-tooltip_text = "[center]IP spoofing[center]"
+tooltip_text = "[center]IP Spoofing – Fakes the source IP address to disguise an attacker’s identity.[center]"
 
 [sub_resource type="Resource" id="Resource_f70fk"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("25_dcv7a")
-tooltip_text = "[center]DDoS[center]"
+tooltip_text = "[center]DDoS – Overloads a system with excessive traffic to disrupt services.[center]"
 
 [sub_resource type="Resource" id="Resource_4oudc"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("27_400xe")
-tooltip_text = "[center]Routing table poisoning[center]"
+tooltip_text = "[center]Routing Table Poisoning – Injects false routing information to misdirect traffic.[center]"
 
 [sub_resource type="Resource" id="Resource_ljtpe"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("29_ggh07")
-tooltip_text = "[center]Wiretapping[center]"
+tooltip_text = "[center]Wiretapping – Unauthorised interception of network communications by tapping into physical cables.[center]"
 
 [sub_resource type="Resource" id="Resource_5ocdw"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("31_ui5fw")
-tooltip_text = "[center]Jamming[center]"
+tooltip_text = "[center]Jamming – Disrupts wireless communication by flooding frequencies with interference.[center]"
 
 [sub_resource type="Resource" id="Resource_cado8"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("33_7owjf")
-tooltip_text = "[center]Cable Cut[center]"
+tooltip_text = "[center]Cable Cut – Physical severing of network cables to disrupt communication.[center]"
 
 [sub_resource type="Resource" id="Resource_feb4t"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("35_xhbw5")
-tooltip_text = "[center]Data Tampering[center]"
+tooltip_text = "[center]Data Tampering – Modifies data in transit to alter information or inject malicious content.[center]"
 
 [sub_resource type="Resource" id="Resource_5dyva"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("37_hag4c")
-tooltip_text = "[center]Man in the Middle[center]"
+tooltip_text = "[center]Man-in-the-Middle – Intercepts and alters communication between two parties.[center]"
 
 [sub_resource type="Resource" id="Resource_5o8to"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("39_bsmr0")
-tooltip_text = "[center]Encoding Exploits[center]"
+tooltip_text = "[center]Encoding Exploits – Uses manipulated encoding schemes to bypass security filters.[center]"
 
 [sub_resource type="Resource" id="Resource_hx8oo"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("41_tuhb1")
-tooltip_text = "[center]Session Fixation[center]"
+tooltip_text = "[center]Session Fixation – Forces a user to use a pre-defined session ID to hijack access.[center]"
 
 [sub_resource type="Resource" id="Resource_qjxos"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("43_dn0mc")
-tooltip_text = "[center]RPC Expolits[center]"
+tooltip_text = "[center]RPC Exploits – Exploits vulnerabilities in Remote Procedure Calls to gain control.[center]"
 
 [sub_resource type="Resource" id="Resource_jejyf"]
 script = ExtResource("4_g8s4l")
 number = "8"
 icon = ExtResource("45_rjxkg")
-tooltip_text = "[center]Session Timeout Abuse[center]"
+tooltip_text = "[center]Session Timeout Abuse – Manipulates session expiration mechanisms to prolong access.[center]"
 
 [node name="FinalEnemyAI" type="Node"]
 script = ExtResource("1_vmvyr")

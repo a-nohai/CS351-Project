@@ -14,19 +14,19 @@
 script = ExtResource("4_p572r")
 number = "8"
 icon = ExtResource("3_2vual")
-tooltip_text = "[center]SQL Injection[center]"
+tooltip_text = "[center]SQL Injection – Injects malicious SQL queries to manipulate or extract database data.[center]"
 
 [sub_resource type="Resource" id="Resource_bqd7q"]
 script = ExtResource("4_p572r")
 number = "8"
 icon = ExtResource("7_kden1")
-tooltip_text = "[center]Cross Site Scripting[center]"
+tooltip_text = "[center]Cross-Site Scripting (XSS) – Injects scripts into web pages to exploit users.[center]"
 
 [sub_resource type="Resource" id="Resource_bhnd8"]
 script = ExtResource("4_p572r")
 number = "8"
 icon = ExtResource("9_0gsyg")
-tooltip_text = "[center]Phishing[center]"
+tooltip_text = "[center]Phishing – Deceives users into revealing sensitive information through fake sites or emails.[center]"
 
 [node name="ApplicationEnemyAI" type="Node"]
 script = ExtResource("1_cxi4i")

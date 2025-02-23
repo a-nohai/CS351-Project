@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_1dmcm")
-tooltip_text = "[center][color=\"0044ff\"]Port Security[/color].[/center]"
+tooltip_text = "[center]	Port Security – Limits MAC addresses per port to prevent unauthorised access.	[center]"
 sound = ExtResource("3_ojoen")

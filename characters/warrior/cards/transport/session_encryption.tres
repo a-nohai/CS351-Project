@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_7conj")
-tooltip_text = "[center][color=\"0044ff\"]Session Encryption[/color].[/center]"
+tooltip_text = "[center]	Session Encryption – Uses encryption to secure session data against hijacking.	[center]"
 sound = ExtResource("3_bitn8")

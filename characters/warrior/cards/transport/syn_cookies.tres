@@ -11,5 +11,5 @@ type = 1
 target = 0
 cost = 1
 icon = ExtResource("1_kjxcf")
-tooltip_text = "[center][color=\"0044ff\"]SYN Cookies[/color].[/center]"
+tooltip_text = "[center]	SYN Cookies – Protects against SYN Floods by delaying resource allocation until authentication.	[center]"
 sound = ExtResource("3_qi3uc")
